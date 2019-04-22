@@ -1,0 +1,26 @@
+function (name, value) {
+  var elem = this[0];
+
+  if (!elem || !isTag(elem)) return;
+
+  if (!elem.data) {
+    elem.data = {};
+  }
+
+  // Return the entire data object if no data specified
+  if (!name) {
+    return readData(elem);
+  }
+
+  // Set the value (with attr map support)
+  if (typeof name === 'object' || value !== undefined) {
+    domEach(this, function(i, el) {
+      setData(el, name, value);
+    });
+    return this;
+  } else if (hasOwn.call(elem.data, name)) {
+    return elem.data[name];
+  }
+
+  return readData(elem, name);
+}

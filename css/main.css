@@ -1,0 +1,80 @@
+/* line 4, scss/main.scss */
+body, html, ul {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+/* line 11, scss/main.scss */
+.price-list {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f8f8f8;
+  width: 80%;
+  margin: 0 auto;
+  display: flex; }
+  /* line 18, scss/main.scss */
+  .price-list__list {
+    color: #666666;
+    font-size: 14px;
+    color: #666; }
+  /* line 24, scss/main.scss */
+  .price-list__item {
+    border-radius: 5px;
+    background-color: white;
+    padding: 15px 20px;
+    margin-top: 3px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: all .4s; }
+    /* line 32, scss/main.scss */
+    .price-list__item > i {
+      margin-right: 15px; }
+    /* line 35, scss/main.scss */
+    .price-list__item:first-child {
+      margin-top: 0; }
+    /* line 39, scss/main.scss */
+    .price-list__item:hover {
+      background-color: #f0f0f0; }
+    /* line 43, scss/main.scss */
+    .price-list__item.active {
+      background: transparent; }
+      /* line 45, scss/main.scss */
+      .price-list__item.active > i {
+        transform: rotate(90deg); }
+  /* line 51, scss/main.scss */
+  .price-list__right {
+    width: 100%;
+    padding: 14px 20px; }
+  /* line 56, scss/main.scss */
+  .price-list__prices {
+    display: none; }
+  /* line 60, scss/main.scss */
+  .price-list__price {
+    font-weight: bold;
+    color: #3a3a3a;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    z-index: 2;
+    position: relative;
+    background-color: #f8f8f8;
+    margin-bottom: 35px; }
+    /* line 71, scss/main.scss */
+    .price-list__price span {
+      background-color: #f8f8f8;
+      z-index: 2; }
+      /* line 74, scss/main.scss */
+      .price-list__price span:last-child {
+        color: #dd3333; }
+    /* line 78, scss/main.scss */
+    .price-list__price::before {
+      content: '';
+      height: 1px;
+      display: block;
+      border-bottom: 2px dotted black;
+      width: 100%;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      z-index: -1; }

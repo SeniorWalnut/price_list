@@ -1,0 +1,13 @@
+{
+  "name": "price_list",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm-run-all --parallel watch-css browser",
+    "watch-css": "node-sass -watch scss scss -o css",
+    "browser": "browser-sync start --watch --server --files \"*.html, *.css\" --notify=false"
+  },
+  "author": "",
+  "license": "ISC"
+}
