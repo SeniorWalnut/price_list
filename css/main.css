@@ -71,7 +71,7 @@ body, html, ul {
       content: '';
       height: 1px;
       display: block;
-      border-bottom: 2px dotted black;
+      border-bottom: 1px dotted black;
       width: 100%;
       position: absolute;
       top: 50%;

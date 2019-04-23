@@ -1,26 +1,1015 @@
-function (name, value) {
-  var elem = this[0];
-
-  if (!elem || !isTag(elem)) return;
-
-  if (!elem.data) {
-    elem.data = {};
-  }
-
-  // Return the entire data object if no data specified
-  if (!name) {
-    return readData(elem);
-  }
-
-  // Set the value (with attr map support)
-  if (typeof name === 'object' || value !== undefined) {
-    domEach(this, function(i, el) {
-      setData(el, name, value);
-    });
-    return this;
-  } else if (hasOwn.call(elem.data, name)) {
-    return elem.data[name];
-  }
-
-  return readData(elem, name);
-}
+<ul class="price-list__prices"><li class="price-list__price">
+					<span>&#x41F;&#x440;&#x438;&#x435;&#x43C; (&#x43E;&#x441;&#x43C;&#x43E;&#x442;&#x440;, &#x43A;&#x43E;&#x43D;&#x441;&#x443;&#x43B;&#x44C;&#x442;&#x430;&#x446;&#x438;&#x44F;) &#x441;&#x43F;&#x435;&#x446;&#x438;&#x430;&#x43B;&#x438;&#x441;&#x442;&#x430; &#x434;&#x435;&#x440;&#x43C;&#x430;&#x442;&#x43E;&#x43B;&#x43E;&#x433;&#x430; / &#x43A;&#x43E;&#x441;&#x43C;&#x435;&#x442;&#x43E;&#x43B;&#x43E;&#x433;&#x430;</span>
+					<span> 700 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41F;&#x43E;&#x432;&#x442;&#x43E;&#x440;&#x43D;&#x430;&#x44F; &#x43A;&#x43E;&#x43D;&#x441;&#x443;&#x43B;&#x44C;&#x442;&#x430;&#x446;&#x438;&#x44F; &#x441;&#x43F;&#x435;&#x446;&#x438;&#x430;&#x43B;&#x438;&#x441;&#x442;&#x430; &#x434;&#x435;&#x440;&#x43C;&#x430;&#x442;&#x43E;&#x43B;&#x43E;&#x433;&#x430;/&#x43A;&#x43E;&#x441;&#x43C;&#x435;&#x442;&#x43E;&#x43B;&#x43E;&#x433;&#x430;</span>
+					<span> 500 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41F;&#x440;&#x438;&#x435;&#x43C; (&#x43E;&#x441;&#x43C;&#x43E;&#x442;&#x440;, &#x43A;&#x43E;&#x43D;&#x441;&#x443;&#x43B;&#x44C;&#x442;&#x430;&#x446;&#x438;&#x44F;) &#x441;&#x43F;&#x435;&#x446;&#x438;&#x430;&#x43B;&#x438;&#x441;&#x442;&#x430; &#x43D;&#x435;&#x432;&#x440;&#x43E;&#x43B;&#x43E;&#x433;&#x430;</span>
+					<span> 1000 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41F;&#x43E;&#x432;&#x442;&#x43E;&#x440;&#x43D;&#x430;&#x44F; &#x43A;&#x43E;&#x43D;&#x441;&#x443;&#x43B;&#x44C;&#x442;&#x430;&#x446;&#x438;&#x44F; &#x441;&#x43F;&#x435;&#x446;&#x438;&#x430;&#x43B;&#x438;&#x441;&#x442;&#x430; &#x43D;&#x435;&#x432;&#x440;&#x43E;&#x43B;&#x43E;&#x433;&#x430;</span>
+					<span> 500 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41F;&#x440;&#x438;&#x435;&#x43C; (&#x43E;&#x441;&#x43C;&#x43E;&#x442;&#x440;, &#x43A;&#x43E;&#x43D;&#x441;&#x443;&#x43B;&#x44C;&#x442;&#x430;&#x446;&#x438;&#x44F;) &#x441;&#x43F;&#x435;&#x446;&#x438;&#x430;&#x43B;&#x438;&#x441;&#x442;&#x430; &#x43C;&#x430;&#x43D;&#x443;&#x430;&#x43B;&#x44C;&#x43D;&#x43E;&#x433;&#x43E; &#x442;&#x435;&#x440;&#x430;&#x43F;&#x435;&#x432;&#x442;&#x430;</span>
+					<span> 1000 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41F;&#x43E;&#x432;&#x442;&#x43E;&#x440;&#x43D;&#x430;&#x44F; &#x43A;&#x43E;&#x43D;&#x441;&#x443;&#x43B;&#x44C;&#x442;&#x430;&#x446;&#x438;&#x44F; &#x441;&#x43F;&#x435;&#x446;&#x438;&#x430;&#x43B;&#x438;&#x441;&#x442;&#x430; &#x43C;&#x430;&#x43D;&#x443;&#x430;&#x43B;&#x44C;&#x43D;&#x43E;&#x433;&#x43E; &#x442;&#x435;&#x440;&#x430;&#x43F;&#x435;&#x432;&#x442;&#x430;</span>
+					<span> 500 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41A;&#x43E;&#x43D;&#x441;&#x443;&#x43B;&#x44C;&#x442;&#x430;&#x446;&#x438;&#x44F; &#x441;&#x43F;&#x435;&#x446;&#x438;&#x430;&#x43B;&#x438;&#x441;&#x442;&#x430; &#x43F;&#x43E; &#x41B;&#x424;&#x41A; &#x438; &#x43C;&#x430;&#x441;&#x441;&#x430;&#x436;&#x443;</span>
+					<span> 300 &#x440;.</span>
+				</li></ul><ul class="price-list__prices"><li class="price-list__price">
+					<span>&#x423;&#x434;&#x430;&#x43B;&#x435;&#x43D;&#x438;&#x435; &#x43A;&#x435;&#x440;&#x430;&#x442;&#x43E;&#x43C; &#x434;&#x43E; 0.5 &#x441;&#x43C;</span>
+					<span> 1000 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x423;&#x434;&#x430;&#x43B;&#x435;&#x43D;&#x438;&#x435; &#x43A;&#x435;&#x440;&#x430;&#x442;&#x43E;&#x43C; &#x43E;&#x442; 0.5 &#x441;&#x43C;</span>
+					<span> 1500 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x423;&#x434;&#x430;&#x43B;&#x435;&#x43D;&#x438;&#x435; &#x43A;&#x435;&#x440;&#x430;&#x442;&#x43E;&#x43C; &#x43E;&#x442; 1 &#x441;&#x43C;</span>
+					<span> 2000 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x423;&#x434;&#x430;&#x43B;&#x435;&#x43D;&#x438;&#x435; &#x444;&#x438;&#x431;&#x440;&#x43E;&#x43C;</span>
+					<span> 500 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x423;&#x434;&#x430;&#x43B;&#x435;&#x43D;&#x438;&#x435; &#x43F;&#x430;&#x43F;&#x438;&#x43B;&#x43B;&#x43E;&#x43C; - 1 &#x448;&#x442;</span>
+					<span> 500 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x423;&#x434;&#x430;&#x43B;&#x435;&#x43D;&#x438;&#x435; &#x43F;&#x430;&#x43F;&#x438;&#x43B;&#x43B;&#x43E;&#x43C; &#x43E;&#x442; 2 &#x434;&#x43E; 5 &#x448;&#x442;</span>
+					<span> 300 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x423;&#x434;&#x430;&#x43B;&#x435;&#x43D;&#x438;&#x435; &#x43F;&#x430;&#x43F;&#x438;&#x43B;&#x43B;&#x43E;&#x43C; &#x43E;&#x442; 6 &#x434;&#x43E; 10 &#x448;&#x442;</span>
+					<span> 200 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x423;&#x434;&#x430;&#x43B;&#x435;&#x43D;&#x438;&#x435; &#x43F;&#x430;&#x43F;&#x438;&#x43B;&#x43B;&#x43E;&#x43C; &#x43E;&#x442; 11 &#x434;&#x43E; 20 &#x448;&#x442;</span>
+					<span> 150 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x423;&#x434;&#x430;&#x43B;&#x435;&#x43D;&#x438;&#x435; &#x431;&#x43E;&#x440;&#x43E;&#x434;&#x430;&#x432;&#x43A;&#x438; &#x434;&#x43E; 0.5 &#x441;&#x43C;</span>
+					<span> 1000 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x423;&#x434;&#x430;&#x43B;&#x435;&#x43D;&#x438;&#x435; &#x431;&#x43E;&#x440;&#x43E;&#x434;&#x430;&#x432;&#x43A;&#x438; &#x43E;&#x442; 0.5 &#x441;&#x43C;</span>
+					<span> 1500 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x423;&#x434;&#x430;&#x43B;&#x435;&#x43D;&#x438;&#x435; &#x431;&#x43E;&#x440;&#x43E;&#x434;&#x430;&#x432;&#x43E;&#x43A; &#x43E;&#x442; 1 &#x441;&#x43C;</span>
+					<span> 2000 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41E;&#x431;&#x435;&#x437;&#x431;&#x43E;&#x43B;&#x438;&#x432;&#x430;&#x43D;&#x438;&#x435;</span>
+					<span> 100 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x423;&#x434;&#x430;&#x43B;&#x435;&#x43D;&#x438;&#x435; &#x432;&#x438;&#x440;&#x443;&#x441;&#x43D;&#x44B;&#x445; &#x431;&#x43E;&#x440;&#x43E;&#x434;&#x430;&#x432;&#x43E;&#x43A; 1 &#x448;&#x442;</span>
+					<span> 1000 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x423;&#x434;&#x430;&#x43B;&#x435;&#x43D;&#x438;&#x435; &#x43D;&#x435;&#x432;&#x443;&#x441;&#x43E;&#x432; &#x434;&#x43E; 0.5 &#x441;&#x43C;</span>
+					<span> 1000 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x423;&#x434;&#x430;&#x43B;&#x435;&#x43D;&#x438;&#x435; &#x43D;&#x435;&#x432;&#x443;&#x441;&#x43E;&#x432; &#x43E;&#x442; 0.5 &#x441;&#x43C;</span>
+					<span> 1500 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x423;&#x434;&#x430;&#x43B;&#x435;&#x43D;&#x438;&#x435; &#x43D;&#x435;&#x432;&#x443;&#x441;&#x43E;&#x432; &#x43E;&#x442; 1 &#x441;&#x43C;</span>
+					<span> 2000 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x423;&#x434;&#x430;&#x43B;&#x435;&#x43D;&#x438;&#x435; &#x43F;&#x438;&#x433;&#x43C;&#x435;&#x43D;&#x442;&#x43D;&#x44B;&#x445; &#x43F;&#x44F;&#x442;&#x435;&#x43D; &#x43D;&#x430; &#x43B;&#x438;&#x446;&#x435; &#x437;&#x430; 1 &#x43A;&#x432;. &#x441;&#x43C;.</span>
+					<span> 1000 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x423;&#x434;&#x430;&#x43B;&#x435;&#x43D;&#x438;&#x435; &#x43F;&#x438;&#x433;&#x43C;&#x435;&#x43D;&#x442;&#x43D;&#x44B;&#x445; &#x43F;&#x44F;&#x442;&#x435;&#x43D; &#x43D;&#x430; &#x442;&#x435;&#x43B;&#x435; &#x437;&#x430; 1 &#x43A;&#x432;. &#x441;&#x43C;.</span>
+					<span> 500 &#x440;.</span>
+				</li></ul><ul class="price-list__prices"><li class="price-list__price">
+					<span>&#x423;&#x434;&#x430;&#x43B;&#x435;&#x43D;&#x438;&#x435; &#x441;&#x43E;&#x441;&#x443;&#x434;&#x43E;&#x432; &#x437;&#x430; 1 &#x43A;&#x432;. &#x441;&#x43C;</span>
+					<span> 1000 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x423;&#x434;&#x430;&#x43B;&#x435;&#x43D;&#x438;&#x435; &#x441;&#x43E;&#x441;&#x443;&#x434;&#x438;&#x441;&#x442;&#x44B;&#x445; &#x437;&#x432;&#x435;&#x437;&#x434;&#x43E;&#x447;&#x435;&#x43A; &#x437;&#x430; 1 &#x43A;&#x432;. &#x441;&#x43C;.</span>
+					<span> 350 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x423;&#x434;&#x430;&#x43B;&#x435;&#x43D;&#x438;&#x435; &#x441;&#x43E;&#x441;&#x443;&#x434;&#x43E;&#x432; &#x43D;&#x430; &#x43A;&#x440;&#x44B;&#x43B;&#x44C;&#x44F;&#x445; &#x43D;&#x43E;&#x441;&#x430;</span>
+					<span> 2000 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x423;&#x434;&#x430;&#x43B;&#x435;&#x43D;&#x438;&#x435; &#x441;&#x43E;&#x441;&#x443;&#x434;&#x43E;&#x432; &#x43D;&#x430; &#x43F;&#x43E;&#x434;&#x431;&#x43E;&#x440;&#x43E;&#x434;&#x43A;&#x435;</span>
+					<span> 2000 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x423;&#x434;&#x430;&#x43B;&#x435;&#x43D;&#x438;&#x435; &#x441;&#x43E;&#x441;&#x443;&#x434;&#x43E;&#x432; &#x43D;&#x430; &#x437;&#x43E;&#x43D;&#x435; &#x449;&#x435;&#x43A; &#x438; &#x441;&#x43A;&#x443;&#x43B;</span>
+					<span> 3500 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x423;&#x434;&#x430;&#x43B;&#x435;&#x43D;&#x438;&#x435; &#x43F;&#x438;&#x433;&#x43C;&#x435;&#x43D;&#x442;&#x43D;&#x44B;&#x445; &#x43F;&#x44F;&#x442;&#x435;&#x43D; &#x434;&#x43E; 1.5 &#x441;&#x43C;</span>
+					<span> 1000 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41E;&#x441;&#x432;&#x435;&#x442;&#x43B;&#x435;&#x43D;&#x438;&#x435; &#x43A;&#x43E;&#x436;&#x438;</span>
+					<span> 3500 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x423;&#x434;&#x430;&#x43B;&#x435;&#x43D;&#x438;&#x435; &#x435;&#x434;&#x438;&#x43D;&#x438;&#x447;&#x43D;&#x44B;&#x445; &#x441;&#x43E;&#x441;&#x443;&#x434;&#x43E;&#x432; &#x434;&#x43E; 5 &#x43C;&#x43C;</span>
+					<span> 500 &#x440;.</span>
+				</li></ul><ul class="price-list__prices"><li class="price-list__price">
+					<span>&#x41C;&#x435;&#x445;&#x430;&#x43D;&#x438;&#x447;&#x435;&#x441;&#x43A;&#x430;&#x44F; &#x447;&#x438;&#x441;&#x442;&#x43A;&#x430; &#x43B;&#x438;&#x446;&#x430;</span>
+					<span> 2500 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41A;&#x43E;&#x43C;&#x431;&#x438;&#x43D;&#x438;&#x440;&#x43E;&#x432;&#x430;&#x43D;&#x43D;&#x430;&#x44F; &#x447;&#x438;&#x441;&#x442;&#x43A;&#x430; &#x43B;&#x438;&#x446;&#x430;</span>
+					<span> 2500 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x423;&#x43B;&#x44C;&#x442;&#x440;&#x430;&#x437;&#x432;&#x443;&#x43A;&#x43E;&#x432;&#x430;&#x44F; &#x447;&#x438;&#x441;&#x442;&#x43A;&#x430; &#x43B;&#x438;&#x446;&#x430;</span>
+					<span> 2000 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x410;&#x442;&#x440;&#x430;&#x432;&#x43C;&#x430;&#x442;&#x438;&#x447;&#x435;&#x441;&#x43A;&#x430;&#x44F; &#x447;&#x438;&#x441;&#x442;&#x43A;&#x430; &#x43B;&#x438;&#x446;&#x430; Holy Land (&#x425;&#x43E;&#x43B;&#x438; &#x41B;&#x44D;&#x43D;&#x434;)</span>
+					<span> 2500 &#x440;.</span>
+				</li></ul><ul class="price-list__prices"><li class="price-list__price">
+					<span>&#x41B;&#x430;&#x437;&#x435;&#x440;&#x43D;&#x43E;&#x435; &#x43E;&#x43C;&#x43E;&#x43B;&#x43E;&#x436;&#x435;&#x43D;&#x438;&#x435; &#x43B;&#x438;&#x446;&#x430;, &#x448;&#x435;&#x438;</span>
+					<span> 10000 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x424;&#x440;&#x430;&#x43A;&#x446;&#x438;&#x43E;&#x43D;&#x43D;&#x44B;&#x439; &#x444;&#x43E;&#x442;&#x43E;&#x442;&#x435;&#x440;&#x43C;&#x43E;&#x43B;&#x438;&#x437; &#x441; &#x446;&#x435;&#x43B;&#x44C;&#x44E; &#x43E;&#x43C;&#x43E;&#x43B;&#x43E;&#x436;&#x435;&#x43D;&#x438;&#x44F; &#x43B;&#x438;&#x446;&#x430;</span>
+					<span> 10000 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x424;&#x440;&#x430;&#x43A;&#x446;&#x438;&#x43E;&#x43D;&#x43D;&#x44B;&#x439; &#x444;&#x43E;&#x442;&#x43E;&#x442;&#x435;&#x440;&#x43C;&#x43E;&#x43B;&#x438;&#x437; &#x441; &#x446;&#x435;&#x43B;&#x44C;&#x44E; &#x43E;&#x43C;&#x43E;&#x43B;&#x43E;&#x436;&#x435;&#x43D;&#x438;&#x44F; &#x448;&#x435;&#x438;</span>
+					<span> 5000 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x424;&#x440;&#x430;&#x43A;&#x446;&#x438;&#x43E;&#x43D;&#x43D;&#x44B;&#x439; &#x444;&#x43E;&#x442;&#x43E;&#x442;&#x435;&#x440;&#x43C;&#x43E;&#x43B;&#x438;&#x437; &#x441; &#x446;&#x435;&#x43B;&#x44C;&#x44E; &#x43E;&#x43C;&#x43E;&#x43B;&#x43E;&#x436;&#x435;&#x43D;&#x438;&#x44F; &#x43E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x438; &#x433;&#x43B;&#x430;&#x437;</span>
+					<span> 3000 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41B;&#x430;&#x437;&#x435;&#x440;&#x43D;&#x430;&#x44F; &#x448;&#x43B;&#x438;&#x444;&#x43E;&#x432;&#x43A;&#x430; &#x441; &#x446;&#x435;&#x43B;&#x44C;&#x44E; &#x43E;&#x43C;&#x43E;&#x43B;&#x43E;&#x436;&#x435;&#x43D;&#x438;&#x44F; &#x43B;&#x438;&#x446;&#x430;</span>
+					<span> 10000 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41B;&#x430;&#x437;&#x435;&#x440;&#x43D;&#x430;&#x44F; &#x448;&#x43B;&#x438;&#x444;&#x43E;&#x432;&#x43A;&#x430; &#x441; &#x446;&#x435;&#x43B;&#x44C;&#x44E; &#x43E;&#x43C;&#x43E;&#x43B;&#x43E;&#x436;&#x435;&#x43D;&#x438;&#x44F; &#x448;&#x435;&#x438;</span>
+					<span> 5000 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41B;&#x430;&#x437;&#x435;&#x440;&#x43D;&#x430;&#x44F; &#x448;&#x43B;&#x438;&#x444;&#x43E;&#x432;&#x43A;&#x430; &#x441; &#x446;&#x435;&#x43B;&#x44C;&#x44E; &#x43E;&#x43C;&#x43E;&#x43B;&#x43E;&#x436;&#x435;&#x43D;&#x438;&#x44F; &#x434;&#x435;&#x43A;&#x43E;&#x43B;&#x44C;&#x442;&#x435;</span>
+					<span> 5000 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41B;&#x430;&#x437;&#x435;&#x440;&#x43D;&#x430;&#x44F; &#x448;&#x43B;&#x438;&#x444;&#x43E;&#x432;&#x43A;&#x430; &#x441; &#x446;&#x435;&#x43B;&#x44C;&#x44E; &#x43E;&#x43C;&#x43E;&#x43B;&#x43E;&#x436;&#x435;&#x43D;&#x438;&#x44F; &#x433;&#x43B;&#x430;&#x437;</span>
+					<span> 3000 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41B;&#x430;&#x437;&#x435;&#x440;&#x43D;&#x430;&#x44F; &#x448;&#x43B;&#x438;&#x444;&#x43E;&#x432;&#x43A;&#x430; &#x441; &#x446;&#x435;&#x43B;&#x44C;&#x44E; &#x43E;&#x43C;&#x43E;&#x43B;&#x43E;&#x436;&#x435;&#x43D;&#x438;&#x44F; &#x43B;&#x431;&#x430;</span>
+					<span> 3000 &#x440;.</span>
+				</li></ul><ul class="price-list__prices"><li class="price-list__price">
+					<span>&#x424;&#x43E;&#x442;&#x43E;&#x43E;&#x43C;&#x43E;&#x43B;&#x43E;&#x436;&#x435;&#x43D;&#x438;&#x435; &#x43D;&#x430; &#x430;&#x43F;&#x43F;&#x430;&#x440;&#x430;&#x442;&#x435; FORMA-TK</span>
+					<span> 4000 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>RF &#x43B;&#x438;&#x444;&#x442;&#x438;&#x43D;&#x433; &#x43B;&#x438;&#x446;&#x430; &#x438; &#x448;&#x435;&#x438;</span>
+					<span> 5000 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>RF &#x43B;&#x438;&#x444;&#x442;&#x438;&#x43D;&#x433; &#x43F;&#x43E;&#x434;&#x431;&#x43E;&#x440;&#x43E;&#x434;&#x43A;&#x430;</span>
+					<span> 2000 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>RF &#x43B;&#x438;&#x444;&#x442;&#x438;&#x43D;&#x433; &#x43B;&#x438;&#x446;&#x430;</span>
+					<span> 4000 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41A;&#x440;&#x438;&#x43E;&#x43B;&#x438;&#x444;&#x442;&#x438;&#x43D;&#x433;</span>
+					<span> 1500 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41C;&#x438;&#x43E;&#x43B;&#x438;&#x444;&#x442;&#x438;&#x43D;&#x433; (&#x43C;&#x438;&#x43A;&#x440;&#x43E;&#x442;&#x43E;&#x43A;&#x438;)</span>
+					<span> 1700 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x423;&#x442;&#x44E;&#x436;&#x43A;&#x438; &#x434;&#x43B;&#x44F; &#x43B;&#x438;&#x446;&#x430;</span>
+					<span> 1750 &#x440;.</span>
+				</li></ul><ul class="price-list__prices"><li class="price-list__price">
+					<span>&#x421;&#x43F;&#x430; &#x43F;&#x438;&#x43B;&#x438;&#x43D;&#x433; Sesderma</span>
+					<span> 3500 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x421;&#x43B;&#x43E;&#x436;&#x43D;&#x44B;&#x439; &#x43F;&#x43E;&#x441;&#x43B;&#x43E;&#x439;&#x43D;&#x44B;&#x439; &#x43F;&#x438;&#x43B;&#x438;&#x43D;&#x433; Sesderma</span>
+					<span> 4000 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41F;&#x438;&#x43B;&#x438;&#x43D;&#x433; C-Peel (&#x426;-&#x43F;&#x438;&#x43B;)</span>
+					<span> 4000 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41C;&#x438;&#x43D;&#x434;&#x430;&#x43B;&#x44C;&#x43D;&#x44B;&#x439; &#x43F;&#x438;&#x43B;&#x438;&#x43D;&#x433;</span>
+					<span> 2000 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x421;&#x430;&#x43B;&#x438;&#x446;&#x438;&#x43B;&#x43E;&#x432;&#x44B;&#x439; &#x43F;&#x438;&#x43B;&#x438;&#x43D;&#x433;</span>
+					<span> 2000 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41F;&#x438;&#x43B;&#x438;&#x43D;&#x433; SALIPEEL LIC (&#x421;&#x430;&#x43B;&#x438;&#x43F;&#x438;&#x43B; &#x41B;&#x438;&#x43A;)</span>
+					<span> 2500 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x410;&#x437;&#x435;&#x43B;&#x430;&#x438;&#x43D;&#x43E;&#x432;&#x44B;&#x439; &#x433;&#x435;&#x43B;&#x435;&#x432;&#x44B;&#x439; &#x43F;&#x438;&#x43B;&#x438;&#x43D;&#x433;</span>
+					<span> 2000 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x410;&#x437;&#x435;&#x43B;&#x430;&#x438;&#x43D;&#x43E;&#x432;&#x44B;&#x439; &#x43F;&#x438;&#x43B;&#x438;&#x43D;&#x433; &#x43A;&#x43E;&#x43C;&#x43F;&#x43B;&#x435;&#x43A;&#x441;&#x43D;&#x44B;&#x439;</span>
+					<span> 2800 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x424;&#x435;&#x440;&#x443;&#x43B;&#x43E;&#x432;&#x44B;&#x439; &#x43F;&#x438;&#x43B;&#x438;&#x43D;&#x433;</span>
+					<span> 3800 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41F;&#x438;&#x43B;&#x438;&#x43D;&#x433; TCA 18% (&#x422;&#x421;&#x410;)</span>
+					<span> 3000 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x420;&#x435;&#x442;&#x438;&#x43D;&#x43E;&#x435;&#x432;&#x44B;&#x439; &#x43F;&#x438;&#x43B;&#x438;&#x43D;&#x433;</span>
+					<span> 6000 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41F;&#x438;&#x43B;&#x438;&#x43D;&#x433; PRX-T33 (&#x41F;&#x420;&#x418;&#x43A;&#x441;/&#x41F;&#x420;&#x425;) - &#x43B;&#x438;&#x446;&#x43E;/&#x43B;&#x438;&#x446;&#x43E;+&#x448;&#x435;&#x44F;</span>
+					<span> 3600 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41F;&#x438;&#x43B;&#x438;&#x43D;&#x433; &#x43F;&#x438;&#x440;&#x43E;&#x432;&#x438;&#x43D;&#x43E;&#x433;&#x440;&#x430;&#x434;&#x43D;&#x44B;&#x439;</span>
+					<span> 3500 &#x440;.</span>
+				</li></ul><ul class="price-list__prices"><li class="price-list__price">
+					<span>&#x41C;&#x435;&#x437;&#x43E;&#x442;&#x435;&#x440;&#x430;&#x43F;&#x438;&#x44F; &#x43B;&#x438;&#x446;&#x430;</span>
+					<span> 2200 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41C;&#x435;&#x437;&#x43E;&#x442;&#x435;&#x440;&#x430;&#x43F;&#x438;&#x44F; &#x43B;&#x438;&#x446;&#x430; &#x438; &#x448;&#x435;&#x438;</span>
+					<span> 2500 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41C;&#x435;&#x437;&#x43E;&#x442;&#x435;&#x440;&#x430;&#x43F;&#x438;&#x44F; &#x442;&#x435;&#x43B;&#x430; (&#x43B;&#x438;&#x43F;&#x43E;&#x43B;&#x438;&#x442;&#x438;&#x43A;&#x438;)</span>
+					<span> 3000 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41C;&#x435;&#x437;&#x43E;&#x442;&#x435;&#x440;&#x430;&#x43F;&#x438;&#x44F; &#x432;&#x43E;&#x43B;&#x43E;&#x441;&#x438;&#x441;&#x442;&#x43E;&#x439; &#x447;&#x430;&#x441;&#x442;&#x438; &#x433;&#x43E;&#x43B;&#x43E;&#x432;&#x44B;</span>
+					<span> 2000 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41C;&#x435;&#x437;&#x43E;&#x442;&#x435;&#x440;&#x430;&#x43F;&#x438;&#x44F; &#x432;&#x43E;&#x43B;&#x43E;&#x441;&#x438;&#x441;&#x442;&#x43E;&#x439; &#x447;&#x430;&#x441;&#x442;&#x438; &#x433;&#x43E;&#x43B;&#x43E;&#x432;&#x44B;</span>
+					<span> 2000 &#x440;.</span>
+				</li></ul><ul class="price-list__prices"><li class="price-list__price">
+					<span>&#x418;&#x43D;&#x44A;&#x435;&#x43A;&#x446;&#x438;&#x44F; Revofil Aquashine HA (&#x420;&#x435;&#x432;&#x43E;&#x444;&#x438;&#x43B; &#x410;&#x43A;&#x432;&#x430;&#x448;&#x430;&#x439;&#x43D; &#x42D;&#x439;&#x447;&#x410;)</span>
+					<span> 11500 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x418;&#x43D;&#x44A;&#x435;&#x43A;&#x446;&#x438;&#x44F; Revofil Aquashine HA BR (&#x420;&#x435;&#x432;&#x43E;&#x444;&#x438;&#x43B; &#x410;&#x43A;&#x432;&#x430;&#x448;&#x430;&#x439;&#x43D; &#x42D;&#x439;&#x447;&#x410; &#x411;&#x420;)</span>
+					<span> 11500 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x418;&#x43D;&#x44A;&#x435;&#x43A;&#x446;&#x438;&#x44F; Meso-Wharton P199 (&#x41C;&#x435;&#x437;&#x43E;-&#x412;&#x430;&#x440;&#x442;&#x43E;&#x43D;)</span>
+					<span> 13000 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x418;&#x43D;&#x44A;&#x435;&#x43A;&#x446;&#x438;&#x44F; Meso-Xanthin F199 (&#x41C;&#x435;&#x437;&#x43E;-&#x41A;&#x441;&#x430;&#x43D;&#x442;&#x438;&#x43D;)</span>
+					<span> 13000 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x418;&#x43D;&#x44A;&#x435;&#x43A;&#x446;&#x438;&#x44F; MesoSculpt C71 (&#x41C;&#x435;&#x437;&#x43E;&#x421;&#x43A;&#x430;&#x43B;&#x44C;&#x43F;&#x442;)</span>
+					<span> 12000 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x418;&#x43D;&#x44A;&#x435;&#x43A;&#x446;&#x438;&#x44F; MesoEye C71 (&#x41C;&#x435;&#x437;&#x43E;&#x410;&#x439;)</span>
+					<span> 10500 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x418;&#x43D;&#x44A;&#x435;&#x43A;&#x446;&#x438;&#x44F; VISCODERM trio 1,5 ml (&#x412;&#x438;&#x441;&#x43A;&#x43E;&#x434;&#x435;&#x440;&#x43C; &#x422;&#x440;&#x438;&#x43E;)</span>
+					<span> 8000 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x418;&#x43D;&#x44A;&#x435;&#x43A;&#x446;&#x438;&#x44F; VISCODERM 1.6 (&#x412;&#x438;&#x441;&#x43A;&#x43E;&#x434;&#x435;&#x440;&#x43C; 1.6)</span>
+					<span> 6800 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x418;&#x43D;&#x44A;&#x435;&#x43A;&#x446;&#x438;&#x44F; VISCODERM 0.8 (&#x412;&#x438;&#x441;&#x43A;&#x43E;&#x434;&#x435;&#x440;&#x43C; 0.8)</span>
+					<span> 6000 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x418;&#x43D;&#x44A;&#x435;&#x43A;&#x446;&#x438;&#x44F; VISCODERM 2.0 (&#x412;&#x438;&#x441;&#x43A;&#x43E;&#x434;&#x435;&#x440;&#x43C; 2.0)</span>
+					<span> 8500 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x418;&#x43D;&#x44A;&#x435;&#x43A;&#x446;&#x438;&#x44F; Belotero Hydro (&#x411;&#x435;&#x43B;&#x43E;&#x442;&#x435;&#x440;&#x43E; &#x413;&#x438;&#x434;&#x440;&#x43E;)</span>
+					<span> 10500 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x418;&#x43D;&#x44A;&#x435;&#x43A;&#x446;&#x438;&#x44F; Juvederm Hydrate (&#x42E;&#x432;&#x438;&#x434;&#x435;&#x440;&#x43C; &#x413;&#x438;&#x434;&#x440;&#x435;&#x439;&#x442;)</span>
+					<span> 9500 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x418;&#x43D;&#x44A;&#x435;&#x43A;&#x446;&#x438;&#x44F; Juvederm Volite (&#x42E;&#x432;&#x438;&#x434;&#x435;&#x440;&#x43C; &#x412;&#x43E;&#x43B;&#x430;&#x439;&#x442;)</span>
+					<span> 16000 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x418;&#x43D;&#x44A;&#x435;&#x43A;&#x446;&#x438;&#x44F; Profhilo (&#x41F;&#x440;&#x43E;&#x444;&#x430;&#x439;&#x43B;&#x43E;)</span>
+					<span> 17000 &#x440;.</span>
+				</li></ul><ul class="price-list__prices"><li class="price-list__price">
+					<span>&#x418;&#x43D;&#x44A;&#x435;&#x43A;&#x446;&#x438;&#x44F; Dysport (&#x414;&#x438;&#x441;&#x43F;&#x43E;&#x440;&#x442;) - 1 &#x435;&#x434;</span>
+					<span> 96 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x418;&#x43D;&#x44A;&#x435;&#x43A;&#x446;&#x438;&#x44F; Xeomin (&#x41A;&#x441;&#x435;&#x43E;&#x43C;&#x438;&#x43D;) - 1 &#x435;&#x434;</span>
+					<span> 250 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x418;&#x43D;&#x44A;&#x435;&#x43A;&#x446;&#x438;&#x44F; Botulax (&#x411;&#x43E;&#x442;&#x443;&#x43B;&#x430;&#x43A;&#x441;) - 1 &#x435;&#x434;</span>
+					<span> 250 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x418;&#x43D;&#x44A;&#x435;&#x43A;&#x446;&#x438;&#x44F; Botox (&#x411;&#x43E;&#x442;&#x43E;&#x43A;&#x441;) - 1 &#x435;&#x434;</span>
+					<span> 300 &#x440;.</span>
+				</li></ul><ul class="price-list__prices"><li class="price-list__price">
+					<span>&#x418;&#x43D;&#x44A;&#x435;&#x43A;&#x446;&#x438;&#x44F; Juvederm ULTRA SMILE (&#x42E;&#x432;&#x438;&#x434;&#x435;&#x440;&#x43C; &#x423;&#x43B;&#x44C;&#x442;&#x440;&#x430; &#x421;&#x43C;&#x430;&#x439;&#x43B;)</span>
+					<span> 9500 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x418;&#x43D;&#x44A;&#x435;&#x43A;&#x446;&#x438;&#x44F; Juvederm VOLBELLA (&#x42E;&#x432;&#x438;&#x434;&#x435;&#x440;&#x43C; &#x412;&#x43E;&#x43B;&#x44C;&#x431;&#x435;&#x43B;&#x43B;&#x430;)</span>
+					<span> 16000 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x418;&#x43D;&#x44A;&#x435;&#x43A;&#x446;&#x438;&#x44F; Juvederm VOLIFT (&#x42E;&#x432;&#x438;&#x434;&#x435;&#x440;&#x43C; &#x412;&#x43E;&#x43B;&#x438;&#x444;&#x442;)</span>
+					<span> 16000 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x418;&#x43D;&#x44A;&#x435;&#x43A;&#x446;&#x438;&#x44F; Juvederm VOLIFT Retouch (&#x42E;&#x432;&#x438;&#x434;&#x435;&#x440;&#x43C; &#x412;&#x43E;&#x43B;&#x438;&#x444;&#x442; &#x420;&#x435;&#x442;&#x430;&#x447;)</span>
+					<span> 10000 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x418;&#x43D;&#x44A;&#x435;&#x43A;&#x446;&#x438;&#x44F; Juvederm VOLUMA (&#x42E;&#x432;&#x438;&#x434;&#x435;&#x440;&#x43C; &#x412;&#x43E;&#x43B;&#x44E;&#x43C;&#x430;)</span>
+					<span> 16000 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x418;&#x43D;&#x44A;&#x435;&#x43A;&#x446;&#x438;&#x44F; Juvederm ULTRA 3 (&#x42E;&#x432;&#x438;&#x434;&#x435;&#x440;&#x43C; &#x423;&#x43B;&#x44C;&#x442;&#x440;&#x430; 3)</span>
+					<span> 14000 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x418;&#x43D;&#x44A;&#x435;&#x43A;&#x446;&#x438;&#x44F; Juvederm ULTRA 4 (&#x42E;&#x432;&#x438;&#x434;&#x435;&#x440;&#x43C; &#x423;&#x43B;&#x44C;&#x442;&#x440;&#x430; 4)</span>
+					<span> 15000 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x418;&#x43D;&#x44A;&#x435;&#x43A;&#x446;&#x438;&#x44F; Etermis 4 (&#x42D;&#x442;&#x435;&#x440;&#x43C;&#x438;&#x441; 4)</span>
+					<span> 15000 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x418;&#x43D;&#x44A;&#x435;&#x43A;&#x446;&#x438;&#x44F; Etermis 3 (&#x42D;&#x442;&#x435;&#x440;&#x43C;&#x438;&#x441; 3)</span>
+					<span> 12000 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x418;&#x43D;&#x44A;&#x435;&#x43A;&#x446;&#x438;&#x44F; Teosyal Redensity 2 (&#x422;&#x435;&#x43E;&#x441;&#x438;&#x430;&#x43B;&#x44C; &#x420;&#x435;&#x434;&#x435;&#x43D;&#x441;&#x438;&#x442;&#x438; 2)</span>
+					<span> 16000 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x418;&#x43D;&#x44A;&#x435;&#x43A;&#x446;&#x438;&#x44F; Teosyal RHA 3 (&#x422;&#x435;&#x43E;&#x441;&#x438;&#x430;&#x43B;&#x44C; &#x42D;&#x440;&#x42D;&#x439;&#x447;&#x410; 3)</span>
+					<span> 16500 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x418;&#x43D;&#x44A;&#x435;&#x43A;&#x446;&#x438;&#x44F; Teosyal RHA 4 (&#x422;&#x435;&#x43E;&#x441;&#x438;&#x430;&#x43B;&#x44C; &#x42D;&#x440;&#x42D;&#x439;&#x447;&#x410; 4)</span>
+					<span> 16500 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x418;&#x43D;&#x44A;&#x435;&#x43A;&#x446;&#x438;&#x44F; Belotero Soft (&#x411;&#x435;&#x43B;&#x43E;&#x442;&#x435;&#x440;&#x43E; &#x421;&#x43E;&#x444;&#x442;)</span>
+					<span> 11600 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x418;&#x43D;&#x44A;&#x435;&#x43A;&#x446;&#x438;&#x44F; Belotero Balance (&#x411;&#x435;&#x43B;&#x43E;&#x442;&#x435;&#x440;&#x43E; &#x411;&#x430;&#x43B;&#x430;&#x43D;&#x441;)</span>
+					<span> 12500 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x418;&#x43D;&#x44A;&#x435;&#x43A;&#x446;&#x438;&#x44F; Belotero Intense (&#x411;&#x435;&#x43B;&#x43E;&#x442;&#x435;&#x440;&#x43E; &#x418;&#x43D;&#x442;&#x435;&#x43D;&#x441;)</span>
+					<span> 13700 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x418;&#x43D;&#x44A;&#x435;&#x43A;&#x446;&#x438;&#x44F; Belotero Volume (&#x411;&#x435;&#x43B;&#x43E;&#x442;&#x435;&#x440;&#x43E; &#x412;&#x43E;&#x43B;&#x44E;&#x43C;)</span>
+					<span> 16000 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x418;&#x43D;&#x44A;&#x435;&#x43A;&#x446;&#x438;&#x44F; Radiesse 1,5 ml (&#x420;&#x430;&#x434;&#x438;&#x435;&#x441;&#x441; 1,5 &#x43C;&#x43B;)</span>
+					<span> 20000 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x418;&#x43D;&#x44A;&#x435;&#x43A;&#x446;&#x438;&#x44F; Hafiller derm (&#x425;&#x430;&#x444;&#x438;&#x43B;&#x43B;&#x435;&#x440; &#x434;&#x435;&#x440;&#x43C;) 0.5 &#x43C;&#x43B;</span>
+					<span> 8000 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x418;&#x43D;&#x44A;&#x435;&#x43A;&#x446;&#x438;&#x44F; Hafiller derm (&#x425;&#x430;&#x444;&#x438;&#x43B;&#x43B;&#x435;&#x440; &#x434;&#x435;&#x440;&#x43C;) 1 &#x43C;&#x43B;</span>
+					<span> 11500 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x418;&#x43D;&#x44A;&#x435;&#x43A;&#x446;&#x438;&#x44F; Hafiller derm deep (&#x425;&#x430;&#x444;&#x438;&#x43B;&#x43B;&#x435;&#x440; &#x434;&#x435;&#x440;&#x43C; &#x434;&#x438;&#x43F;) 1 &#x43C;&#x43B;</span>
+					<span> 11500 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x418;&#x43D;&#x44A;&#x435;&#x43A;&#x446;&#x438;&#x44F; Hafiller derm deep (&#x425;&#x430;&#x444;&#x438;&#x43B;&#x43B;&#x435;&#x440; &#x434;&#x435;&#x440;&#x43C; &#x434;&#x438;&#x43F;) 2 &#x43C;&#x43B;</span>
+					<span> 17000 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x418;&#x43D;&#x44A;&#x435;&#x43A;&#x446;&#x438;&#x44F; Hafiller fine lines (&#x425;&#x430;&#x444;&#x438;&#x43B;&#x43B;&#x435;&#x440; &#x444;&#x430;&#x439;&#x43D; &#x43B;&#x430;&#x439;&#x43D;&#x441;)</span>
+					<span> 11500 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x418;&#x43D;&#x44A;&#x435;&#x43A;&#x446;&#x438;&#x44F; Hafiller Plus (&#x425;&#x430;&#x444;&#x438;&#x43B;&#x43B;&#x435;&#x440; &#x43F;&#x43B;&#x44E;&#x441;)</span>
+					<span> 13500 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x418;&#x43D;&#x44A;&#x435;&#x43A;&#x446;&#x438;&#x44F; Hafiller sub skin (&#x425;&#x430;&#x444;&#x438;&#x43B;&#x43B;&#x435;&#x440; &#x441;&#x430;&#x431; &#x441;&#x43A;&#x438;&#x43D;)</span>
+					<span> 17000 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x418;&#x43D;&#x44A;&#x435;&#x43A;&#x446;&#x438;&#x44F; Princess Filler (&#x41F;&#x440;&#x438;&#x43D;&#x446;&#x435;&#x441; &#x444;&#x438;&#x43B;&#x43B;&#x435;&#x440;)</span>
+					<span> 13000 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x418;&#x43D;&#x44A;&#x435;&#x43A;&#x446;&#x438;&#x44F; Princess Volume (&#x41F;&#x440;&#x438;&#x43D;&#x446;&#x435;&#x441; &#x432;&#x43E;&#x43B;&#x44E;&#x43C;)</span>
+					<span> 14000 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x418;&#x43D;&#x44A;&#x435;&#x43A;&#x446;&#x438;&#x44F; Radiesse 0,8 ml (&#x420;&#x430;&#x434;&#x438;&#x435;&#x441;&#x441; 0,8 &#x43C;&#x43B;)</span>
+					<span> 15000 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x418;&#x43D;&#x44A;&#x435;&#x43A;&#x446;&#x438;&#x44F; Surgiderm 24xp (&#x421;&#x443;&#x440;&#x434;&#x436;&#x438;&#x434;&#x435;&#x440;&#x43C;)</span>
+					<span> 15000 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x418;&#x43D;&#x44A;&#x435;&#x43A;&#x446;&#x438;&#x44F; Teosyal RHA 1 (&#x422;&#x435;&#x43E;&#x441;&#x438;&#x430;&#x43B;&#x44C; &#x42D;&#x440;&#x42D;&#x439;&#x447;&#x410; 1)</span>
+					<span> 13000 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x418;&#x43D;&#x44A;&#x435;&#x43A;&#x446;&#x438;&#x44F; Teosyal RHA 2 (&#x422;&#x435;&#x43E;&#x441;&#x438;&#x430;&#x43B;&#x44C; &#x42D;&#x440;&#x42D;&#x439;&#x447;&#x410; 2)</span>
+					<span> 13500 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x418;&#x43D;&#x44A;&#x435;&#x43A;&#x446;&#x438;&#x44F; Teosyal Ultimate (&#x422;&#x435;&#x43E;&#x441;&#x438;&#x430;&#x43B;&#x44C; &#x423;&#x43B;&#x44C;&#x442;&#x438;&#x43C;&#x435;&#x439;&#x442;)</span>
+					<span> 14500 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x418;&#x43D;&#x44A;&#x435;&#x43A;&#x446;&#x438;&#x44F; Teosyal Ultradeep (&#x422;&#x435;&#x43E;&#x441;&#x438;&#x430;&#x43B;&#x44C; &#x423;&#x43B;&#x44C;&#x442;&#x440;&#x430;&#x434;&#x438;&#x43F;)</span>
+					<span> 15500 &#x440;.</span>
+				</li></ul><ul class="price-list__prices"><li class="price-list__price">
+					<span>&#x423;&#x441;&#x442;&#x430;&#x43D;&#x43E;&#x432;&#x43A;&#x430; &#x43D;&#x438;&#x442;&#x435;&#x439; Aptos Excellence Visage (&#x410;&#x43F;&#x442;&#x43E;&#x441; &#x42D;&#x43A;&#x441;&#x435;&#x43B;&#x435;&#x43D;&#x441; &#x412;&#x438;&#x437;&#x430;&#x436;)</span>
+					<span> 40000 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x423;&#x441;&#x442;&#x430;&#x43D;&#x43E;&#x432;&#x43A;&#x430; &#x43D;&#x438;&#x442;&#x435;&#x439; Aptos Excellence Visage Soft (&#x410;&#x43F;&#x442;&#x43E;&#x441; &#x42D;&#x43A;&#x441;&#x435;&#x43B;&#x435;&#x43D;&#x441; &#x412;&#x438;&#x437;&#x430;&#x436; &#x421;&#x43E;&#x444;&#x442;)</span>
+					<span> 35000 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x423;&#x441;&#x442;&#x430;&#x43D;&#x43E;&#x432;&#x43A;&#x430; &#x43D;&#x438;&#x442;&#x435;&#x439; Aptos Light Lift Tread 2G (&#x410;&#x43F;&#x442;&#x43E;&#x441; &#x41B;&#x430;&#x439;&#x442; &#x41B;&#x438;&#x444;&#x442; &#x422;&#x440;&#x435;&#x434; 2&#x413;)</span>
+					<span> 30000 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x423;&#x441;&#x442;&#x430;&#x43D;&#x43E;&#x432;&#x43A;&#x430; &#x43C;&#x435;&#x437;&#x43E;&#x43D;&#x438;&#x442;&#x435;&#x439; - 1 &#x448;&#x442;</span>
+					<span> 1000 &#x440;.</span>
+				</li></ul><ul class="price-list__prices"><li class="price-list__price">
+					<span>&#x41F;&#x43B;&#x430;&#x437;&#x43C;&#x43E;&#x442;&#x435;&#x440;&#x430;&#x43F;&#x438;&#x44F; &#x432;&#x43E;&#x43B;&#x43E;&#x441;&#x438;&#x441;&#x442;&#x43E;&#x439; &#x447;&#x430;&#x441;&#x442;&#x438; &#x433;&#x43E;&#x43B;&#x43E;&#x432;&#x44B;</span>
+					<span> 2500 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41F;&#x43B;&#x430;&#x437;&#x43C;&#x43E;&#x442;&#x435;&#x440;&#x430;&#x43F;&#x438;&#x44F; &#x43B;&#x438;&#x446;&#x430;</span>
+					<span> 3500 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41F;&#x43B;&#x430;&#x437;&#x43C;&#x43E;&#x442;&#x435;&#x440;&#x430;&#x43F;&#x438;&#x44F; &#x448;&#x435;&#x438; &#x438; &#x434;&#x435;&#x43A;&#x43E;&#x43B;&#x44C;&#x442;&#x435;</span>
+					<span> 3500 &#x440;.</span>
+				</li></ul><ul class="price-list__prices"><li class="price-list__price">
+					<span>&#x425;&#x438;&#x440;&#x43E;&#x43C;&#x430;&#x441;&#x441;&#x430;&#x436; &#x43B;&#x438;&#x446;&#x430;, &#x448;&#x435;&#x438;, &#x434;&#x435;&#x43A;&#x43E;&#x43B;&#x44C;&#x442;&#x435;</span>
+					<span> 1100 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x411;&#x443;&#x43A;&#x43A;&#x430;&#x43B;&#x44C;&#x43D;&#x44B;&#x439; &#x43C;&#x430;&#x441;&#x441;&#x430;&#x436;</span>
+					<span> 1000 &#x440;.</span>
+				</li></ul><ul class="price-list__prices"><li class="price-list__price">
+					<span>&#x412;&#x435;&#x440;&#x445;&#x43D;&#x44F;&#x44F; &#x433;&#x443;&#x431;&#x430; &#x436;/&#x43C;</span>
+					<span> 900 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41F;&#x43E;&#x434;&#x431;&#x43E;&#x440;&#x43E;&#x434;&#x43E;&#x43A; &#x436;/&#x43C;</span>
+					<span> 1500 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x428;&#x435;&#x44F; (&#x433;&#x43E;&#x440;&#x43B;&#x43E;) &#x436;/&#x43C;</span>
+					<span> 2000 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41C;&#x435;&#x436;&#x431;&#x440;&#x43E;&#x432;&#x44C;&#x435; &#x436;/&#x43C;</span>
+					<span> 900 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x412;&#x438;&#x441;&#x43A;&#x438; &#x436;/&#x43C;</span>
+					<span> 900 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x411;&#x430;&#x43A;&#x435;&#x43D;&#x431;&#x430;&#x440;&#x434;&#x44B; &#x436;/&#x43C;</span>
+					<span> 1200 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x429;&#x435;&#x43A;&#x438; &#x436;/&#x43C;</span>
+					<span> 1000 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41F;&#x43E;&#x434;&#x43C;&#x44B;&#x448;&#x435;&#x447;&#x43D;&#x44B;&#x435; &#x432;&#x43F;&#x430;&#x434;&#x438;&#x43D;&#x44B; &#x436;/&#x43C;</span>
+					<span> 2000 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x415;&#x434;&#x438;&#x43D;&#x438;&#x447;&#x43D;&#x430;&#x44F; &#x432;&#x441;&#x43F;&#x44B;&#x448;&#x43A;&#x430;</span>
+					<span> 200 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41F;&#x43B;&#x435;&#x447;&#x438; (&#x440;&#x443;&#x43A;&#x438; &#x432;&#x44B;&#x448;&#x435; &#x43B;&#x43E;&#x43A;&#x442;&#x44F;) &#x436;/&#x43C;</span>
+					<span> 2500 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41F;&#x440;&#x435;&#x434;&#x43F;&#x43B;&#x435;&#x447;&#x44C;&#x44F; (&#x440;&#x443;&#x43A;&#x438; &#x434;&#x43E; &#x43B;&#x43E;&#x43A;&#x442;&#x44F;) &#x436;/&#x43C;</span>
+					<span> 3500 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x420;&#x443;&#x43A;&#x438; &#x43F;&#x43E;&#x43B;&#x43D;&#x43E;&#x441;&#x442;&#x44C;&#x44E; &#x436;/&#x43C;</span>
+					<span> 5000 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41A;&#x43E;&#x43B;&#x435;&#x43D;&#x438;</span>
+					<span> 2000 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41A;&#x438;&#x441;&#x442;&#x438; &#x440;&#x443;&#x43A; &#x436;/&#x43C;</span>
+					<span> 1200 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41F;&#x430;&#x43B;&#x44C;&#x446;&#x44B; &#x440;&#x443;&#x43A; &#x436;/&#x43C;</span>
+					<span> 1000 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x413;&#x440;&#x443;&#x434;&#x44C; (&#x430;&#x440;&#x435;&#x43E;&#x43B;&#x430; &#x441;&#x43E;&#x441;&#x43A;&#x43E;&#x432;)</span>
+					<span> 1200 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x413;&#x440;&#x443;&#x434;&#x44C; &#x43F;&#x43E;&#x43B;&#x43D;&#x43E;&#x441;&#x442;&#x44C;&#x44E; &#x436;/&#x43C;</span>
+					<span> 2800 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41B;&#x438;&#x43D;&#x438;&#x44F; &#x436;&#x438;&#x432;&#x43E;&#x442;&#x430; &#x436;/&#x43C;</span>
+					<span> 1400 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41D;&#x430;&#x440;&#x443;&#x436;&#x43D;&#x43E;&#x435; &#x431;&#x438;&#x43A;&#x438;&#x43D;&#x438; (&#x43F;&#x43E; &#x43B;&#x438;&#x43D;&#x438;&#x438; &#x431;&#x435;&#x43B;&#x44C;&#x44F;) &#x436;/&#x43C;</span>
+					<span> 2500 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x413;&#x43B;&#x443;&#x431;&#x43E;&#x43A;&#x43E;&#x435; &#x431;&#x438;&#x43A;&#x438;&#x43D;&#x438; &#x436;/&#x43C;</span>
+					<span> 4500 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x422;&#x43E;&#x442;&#x430;&#x43B;&#x44C;&#x43D;&#x43E;&#x435; &#x431;&#x438;&#x43A;&#x438;&#x43D;&#x438; &#x436;/&#x43C;</span>
+					<span> 5000 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x413;&#x43E;&#x43B;&#x435;&#x43D;&#x438; &#x436;/&#x43C;</span>
+					<span> 4000 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x411;&#x435;&#x434;&#x440;&#x430; &#x43F;&#x43E;&#x43B;&#x43D;&#x43E;&#x441;&#x442;&#x44C;&#x44E; &#x436;/&#x43C;</span>
+					<span> 5500 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x411;&#x435;&#x434;&#x440;&#x430; &#x43F;&#x435;&#x440;&#x435;&#x434;&#x43D;&#x44F;&#x44F;/&#x437;&#x430;&#x434;&#x43D;&#x44F;&#x44F;/&#x432;&#x43D;&#x443;&#x442;&#x440;&#x435;&#x43D;&#x44F;&#x44F; &#x43F;&#x43E;&#x432;&#x435;&#x440;&#x445;&#x43D;&#x43E;&#x441;&#x442;&#x44C; &#x436;/&#x43C;</span>
+					<span> 2800 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41D;&#x43E;&#x433;&#x438; &#x43F;&#x43E;&#x43B;&#x43D;&#x43E;&#x441;&#x442;&#x44C;&#x44E;</span>
+					<span> 8000 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41F;&#x430;&#x43B;&#x44C;&#x446;&#x44B; &#x43D;&#x43E;&#x433;</span>
+					<span> 1000 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x423;&#x448;&#x438;, &#x43D;&#x43E;&#x441; - &#x43F;&#x43E; &#x432;&#x441;&#x43F;&#x44B;&#x448;&#x43A;&#x430;&#x43C;</span>
+					<span> 200 &#x440;.</span>
+				</li></ul><ul class="price-list__prices"></ul><ul class="price-list__prices"></ul><ul class="price-list__prices"><li class="price-list__price">
+					<span>&#x41C;&#x44B;&#x448;&#x435;&#x447;&#x43D;&#x44B;&#x435; &#x442;&#x440;&#x438;&#x433;&#x433;&#x435;&#x440;&#x43D;&#x44B;&#x435; &#x437;&#x43E;&#x43D;&#x44B;</span>
+					<span> 1500 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41F;&#x43E;&#x434;&#x43E;&#x448;&#x432;&#x435;&#x43D;&#x43D;&#x44B;&#x439; &#x444;&#x430;&#x441;&#x446;&#x438;&#x442;/&#x43F;&#x44F;&#x442;&#x43E;&#x447;&#x43D;&#x430;&#x44F; &#x448;&#x43F;&#x43E;&#x440;&#x430;</span>
+					<span> 1500 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x410;&#x445;&#x438;&#x43B;&#x43B;&#x43E;&#x434;&#x438;&#x43D;&#x438;&#x44F;</span>
+					<span> 1500 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x423;&#x432;&#x442; &#x433;&#x43E;&#x43B;&#x435;&#x43D;&#x438;</span>
+					<span> 1500 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x411;&#x43E;&#x43B;&#x44C;&#x448;&#x435;&#x431;&#x435;&#x440;&#x446;&#x43E;&#x432;&#x43E;&#x439; &#x441;&#x442;&#x440;&#x435;&#x441;&#x441; &#x441;&#x438;&#x43D;&#x434;&#x440;&#x43E;&#x43C;/&#x431;&#x43E;&#x43B;&#x435;&#x432;&#x43E;&#x439; &#x441;&#x438;&#x43D;&#x434;&#x440;&#x43E;&#x43C; &#x43C;&#x44B;&#x448;&#x446; &#x433;&#x43E;&#x43B;&#x435;&#x43D;&#x438; &#x438; &#x43E;&#x433;&#x440;&#x430;&#x43D;&#x438;&#x447;&#x435;&#x43D;&#x438;&#x435; &#x434;&#x432;&#x438;&#x436;&#x435;&#x43D;&#x438;&#x44F; &#x433;&#x43E;&#x43B;&#x435;&#x43D;&#x43E;&#x441;&#x442;&#x43E;&#x43F;&#x43D;&#x43E;&#x433;&#x43E; &#x441;&#x443;&#x441;&#x442;&#x430;&#x432;&#x430;</span>
+					<span> 1500 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41A;&#x430;&#x43B;&#x44C;&#x446;&#x438;&#x43D;&#x438;&#x440;&#x43E;&#x432;&#x430;&#x43D;&#x43D;&#x44B;&#x439; &#x442;&#x435;&#x43D;&#x434;&#x438;&#x43D;&#x438;&#x442;</span>
+					<span> 2000 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x411;&#x43E;&#x43B;&#x435;&#x432;&#x43E;&#x439; &#x441;&#x438;&#x43D;&#x434;&#x440;&#x43E;&#x43C; &#x44F;&#x433;&#x43E;&#x434;&#x438;&#x446;&#x44B;, &#x431;&#x435;&#x434;&#x440;&#x430;/&#x438;&#x448;&#x438;&#x430;&#x441;</span>
+					<span> 1800 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41B;&#x443;&#x447;&#x435;&#x432;&#x43E;&#x439;/&#x43B;&#x43E;&#x43A;&#x442;&#x435;&#x432;&#x43E;&#x439; &#x43F;&#x43B;&#x435;&#x447;&#x435;&#x432;&#x43E;&#x439; &#x44D;&#x43F;&#x438;&#x43A;&#x43E;&#x43D;&#x434;&#x438;&#x43B;&#x438;&#x442;</span>
+					<span> 1500 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41C;&#x44B;&#x448;&#x435;&#x447;&#x43D;&#x44B;&#x435; &#x442;&#x440;&#x438;&#x433;&#x433;&#x435;&#x440;&#x43D;&#x44B;&#x435; &#x437;&#x43E;&#x43D;&#x44B; &#x448;&#x435;&#x44F; + &#x43D;&#x430;&#x434;&#x43F;&#x43B;&#x435;&#x447;&#x44C;&#x435; &#x434;&#x43E; 3 &#x433;&#x440;&#x443;&#x434;</span>
+					<span> 2000 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41C;&#x44B;&#x448;&#x435;&#x447;&#x43D;&#x44B;&#x435; &#x442;&#x440;&#x438;&#x433;&#x433;&#x435;&#x440;&#x43D;&#x44B;&#x435; &#x437;&#x43E;&#x43D;&#x44B; &#x433;&#x440;&#x443;&#x434;&#x43D;&#x43E;&#x439; &#x43E;&#x442;&#x434;&#x435;&#x43B; + &#x43D;&#x430;&#x434;&#x43F;&#x43B;&#x435;&#x447;&#x44C;&#x435;</span>
+					<span> 2000 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41C;&#x44B;&#x448;&#x435;&#x447;&#x43D;&#x44B;&#x435; &#x442;&#x440;&#x438;&#x433;&#x433;&#x435;&#x440;&#x43D;&#x44B;&#x435; &#x437;&#x43E;&#x43D;&#x44B; &#x43F;&#x43E;&#x44F;&#x441;&#x43D;&#x438;&#x447;&#x43D;&#x44B;&#x439; &#x43E;&#x442;&#x434;&#x435;&#x43B; + &#x44F;&#x433;&#x43E;&#x434;&#x438;&#x446;&#x44B;</span>
+					<span> 2000 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41C;&#x430;&#x43D;&#x443;&#x430;&#x43B;&#x44C;&#x43D;&#x430;&#x44F; &#x442;&#x435;&#x440;&#x430;&#x43F;&#x438;&#x44F; (&#x428;&#x41E;&#x41F;+&#x413;&#x41E;&#x41F;+&#x41F;&#x41E;&#x41F;+&#x41A;&#x41F;&#x421;)</span>
+					<span> 2500 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41C;&#x430;&#x43D;&#x443;&#x430;&#x43B;&#x44C;&#x43D;&#x430;&#x44F; &#x442;&#x435;&#x440;&#x430;&#x43F;&#x438;&#x44F; + &#x41F;&#x418;&#x420; &#x428;&#x41E;&#x41F;</span>
+					<span> 3000 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41F;&#x418;&#x420; (&#x43E;&#x434;&#x43D;&#x430; &#x430;&#x43D;&#x430;&#x442;&#x43E;&#x43C;&#x438;&#x447;&#x435;&#x441;&#x43A;&#x430;&#x44F; &#x437;&#x43E;&#x43D;&#x430;)</span>
+					<span> 1000 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x420;&#x435;&#x444;&#x43B;&#x435;&#x43A;&#x441;&#x43E;&#x442;&#x435;&#x440;&#x430;&#x43F;&#x438;&#x44F;</span>
+					<span> 1500 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x421;&#x443;&#x445;&#x43E;&#x435; &#x442;&#x440;&#x430;&#x43A;&#x446;&#x438;&#x43E;&#x43D;&#x43D;&#x43E;&#x435; &#x432;&#x44B;&#x442;&#x44F;&#x436;&#x435;&#x43D;&#x438;&#x435; &#x43F;&#x43E;&#x44F;&#x441;&#x43D;&#x438;&#x447;&#x43D;&#x43E;-&#x43A;&#x440;&#x435;&#x441;&#x442;&#x446;&#x43E;&#x432;&#x43E;&#x433;&#x43E; &#x43E;&#x442;&#x434;&#x435;&#x43B;&#x430; &#x43F;&#x43E;&#x437;&#x432;&#x43E;&#x43D;&#x43E;&#x447;&#x43D;&#x438;&#x43A;&#x430;</span>
+					<span> 1200 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x421;&#x443;&#x445;&#x43E;&#x435; &#x442;&#x440;&#x430;&#x43A;&#x446;&#x438;&#x43E;&#x43D;&#x43D;&#x43E;&#x435; &#x432;&#x44B;&#x442;&#x44F;&#x436;&#x435;&#x43D;&#x438;&#x435; &#x448;&#x435;&#x439;&#x43D;&#x43E;&#x433;&#x43E; &#x43E;&#x442;&#x434;&#x435;&#x43B;&#x430; &#x43F;&#x43E;&#x437;&#x432;&#x43E;&#x43D;&#x43E;&#x447;&#x43D;&#x438;&#x43A;&#x430;</span>
+					<span> 800 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x424;&#x43E;&#x43D;&#x43E;&#x444;&#x43E;&#x440;&#x435;&#x437; &#x441; &#x43F;&#x440;&#x438;&#x43C;&#x435;&#x43D;&#x435;&#x43D;&#x438;&#x435;&#x43C; &#x43F;&#x43E;&#x43B;&#x438;&#x444;&#x435;&#x440;&#x43C;&#x435;&#x43D;&#x442;&#x43D;&#x43E;&#x433;&#x43E; &#x43F;&#x440;&#x435;&#x43F;&#x430;&#x440;&#x430;&#x442;&#x430; &#xAB;&#x41A;&#x430;&#x440;&#x438;&#x43F;&#x430;&#x438;&#x43D;&#xBB;</span>
+					<span> 650 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x42D;&#x43B;&#x435;&#x43A;&#x442;&#x440;&#x43E;&#x444;&#x43E;&#x440;&#x435;&#x437; &#x441; &#x43F;&#x440;&#x438;&#x43C;&#x435;&#x43D;&#x435;&#x43D;&#x438;&#x435;&#x43C; &#x43F;&#x43E;&#x43B;&#x438;&#x444;&#x435;&#x440;&#x43C;&#x435;&#x43D;&#x442;&#x43D;&#x43E;&#x433;&#x43E; &#x43F;&#x440;&#x435;&#x43F;&#x430;&#x440;&#x430;&#x442;&#x430; &#xAB;&#x41A;&#x430;&#x440;&#x438;&#x43F;&#x430;&#x438;&#x43D;&#xBB;</span>
+					<span> 600 &#x440;.</span>
+				</li></ul><ul class="price-list__prices"><li class="price-list__price">
+					<span>Hyalpaier (&#x43E;&#x434;&#x438;&#x43D; &#x441;&#x443;&#x441;&#x442;&#x430;&#x432;)</span>
+					<span> 10000 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x412;&#x43D;&#x443;&#x442;&#x440;&#x438;&#x441;&#x443;&#x441;&#x442;&#x430;&#x432;&#x43D;&#x43E;&#x435; &#x432;&#x432;&#x435;&#x434;&#x435;&#x43D;&#x438;&#x435; &#x433;&#x438;&#x430;&#x43B;&#x443;&#x440;&#x43E;&#x43D;&#x43E;&#x432;&#x43E;&#x439; &#x43A;&#x438;&#x441;&#x43B;&#x43E;&#x442;&#x44B; &#x441; &#x43F;&#x440;&#x435;&#x43F;&#x430;&#x440;&#x430;&#x442;&#x43E;&#x43C; Hyaron (&#x43E;&#x434;&#x438;&#x43D; &#x441;&#x443;&#x441;&#x442;&#x430;&#x432;)</span>
+					<span> 7000 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x412;&#x43D;&#x443;&#x442;&#x440;&#x438;&#x441;&#x443;&#x441;&#x442;&#x430;&#x432;&#x43D;&#x44B;&#x435; &#x438;&#x43D;&#x44A;&#x435;&#x43A;&#x446;&#x438;&#x438;</span>
+					<span> 1500 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x418;&#x433;&#x43B;&#x43E;&#x440;&#x435;&#x444;&#x43B;&#x435;&#x43A;&#x441;&#x43E;&#x442;&#x435;&#x440;&#x430;&#x43F;&#x438;&#x44F;</span>
+					<span> 1500 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41B;&#x430;&#x437;&#x435;&#x440;&#x43E;&#x442;&#x435;&#x440;&#x430;&#x43F;&#x438;&#x44F; &#x441;&#x443;&#x441;&#x442;&#x430;&#x432;&#x430;</span>
+					<span> 1000 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x423;&#x43B;&#x44C;&#x442;&#x440;&#x430;&#x437;&#x432;&#x443;&#x43A;&#x43E;&#x432;&#x430;&#x44F; &#x442;&#x435;&#x440;&#x430;&#x43F;&#x438;&#x44F;</span>
+					<span> 600 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41E;&#x437;&#x43E;&#x43D;&#x43E;&#x442;&#x435;&#x440;&#x430;&#x43F;&#x438;&#x44F;</span>
+					<span> 600 &#x440;.</span>
+				</li></ul><ul class="price-list__prices"><li class="price-list__price">
+					<span>&#x41B;&#x444;&#x43A; &#x434;&#x43B;&#x44F; &#x432;&#x437;&#x440;&#x43E;&#x441;&#x43B;&#x44B;&#x445; - &#x438;&#x43D;&#x434;&#x438;&#x432;&#x438;&#x434;&#x443;&#x430;&#x43B;&#x44C;&#x43D;&#x44B;&#x435; &#x437;&#x430;&#x43D;&#x44F;&#x442;&#x438;&#x44F;</span>
+					<span> 800 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41B;&#x444;&#x43A; &#x433;&#x440;&#x443;&#x43F;&#x43F;&#x43E;&#x432;&#x44B;&#x435; &#x437;&#x430;&#x43D;&#x44F;&#x442;&#x438;&#x44F; &#x43E;&#x442; 2-&#x445; &#x447;&#x435;&#x43B;&#x43E;&#x432;&#x435;&#x43A;</span>
+					<span> 450 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41F;&#x43E;&#x441;&#x435;&#x449;&#x435;&#x43D;&#x438;&#x435; &#x43A;&#x430;&#x440;&#x434;&#x438;&#x43E;&#x437;&#x430;&#x43B;&#x430; (1&#x447; 30&#x43C;)</span>
+					<span> 400 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x410;&#x431;&#x43E;&#x43D;&#x435;&#x43C;&#x435;&#x43D;&#x442; &#x43D;&#x430; 4 &#x437;&#x430;&#x43D;&#x44F;&#x442;&#x438;&#x44F; &#x432; &#x43A;&#x430;&#x440;&#x434;&#x438;&#x43E;&#x437;&#x430;&#x43B;&#x435;</span>
+					<span> 1200 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x410;&#x431;&#x43E;&#x43D;&#x435;&#x43C;&#x435;&#x43D;&#x442; &#x43D;&#x430; 8 &#x437;&#x430;&#x43D;&#x44F;&#x442;&#x438;&#x439; &#x432; &#x43A;&#x430;&#x440;&#x434;&#x438;&#x43E;&#x437;&#x430;&#x43B;&#x435;</span>
+					<span> 2400 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x410;&#x431;&#x43E;&#x43D;&#x435;&#x43C;&#x435;&#x43D;&#x442; &#x43D;&#x430; 12 &#x437;&#x430;&#x43D;&#x44F;&#x442;&#x438;&#x439; &#x432; &#x43A;&#x430;&#x440;&#x434;&#x438;&#x43E;&#x437;&#x430;&#x43B;&#x435;</span>
+					<span> 3200 &#x440;.</span>
+				</li></ul><ul class="price-list__prices"><li class="price-list__price">
+					<span>&#x412;&#x43D;&#x443;&#x442;&#x440;&#x438;&#x432;&#x435;&#x43D;&#x43D;&#x43E;&#x435; &#x432;&#x432;&#x435;&#x434;&#x435;&#x43D;&#x438;&#x435; &#x43E;&#x437;&#x43E;&#x43D;&#x43E;&#x43D;&#x430;&#x441;&#x44B;&#x449;&#x435;&#x43D;&#x43D;&#x43E;&#x433;&#x43E; 0,9% NACL</span>
+					<span> 600 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41C;&#x430;&#x43B;&#x430;&#x44F; &#x43E;&#x437;&#x43E;&#x43D;&#x43E;&#x432;&#x430;&#x44F; &#x430;&#x443;&#x442;&#x43E;&#x433;&#x435;&#x43C;&#x43E;&#x442;&#x435;&#x440;&#x430;&#x43F;&#x438;&#x44F; c &#x41E;3</span>
+					<span> 400 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41F;&#x440;&#x43E;&#x442;&#x43E;&#x447;&#x43D;&#x43E;&#x435; &#x43E;&#x440;&#x43E;&#x448;&#x435;&#x43D;&#x438;&#x435; &#x43E;&#x437;&#x43E;&#x43D;&#x43E;-&#x43A;&#x438;&#x441;&#x43B;&#x43E;&#x440;&#x43E;&#x434;&#x43D;&#x43E;&#x439; &#x441;&#x43C;&#x435;&#x441;&#x44C;&#x44E; &#x432; &#x43F;&#x43B;&#x430;&#x441;&#x442;&#x438;&#x43A;&#x43E;&#x432;&#x43E;&#x43C; &#x43C;&#x435;&#x448;&#x43A;&#x435; (&#x43E;&#x434;&#x43D;&#x430;-&#x43A;&#x43E;&#x43D;&#x435;&#x447;&#x43D;&#x43E;&#x441;&#x442;&#x44C;)</span>
+					<span> 500 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x418;&#x43D;&#x44A;&#x435;&#x43A;&#x446;&#x438;&#x438; &#x43E;&#x437;&#x43E;&#x43D;&#x430; &#x432; &#x43B;&#x438;&#x446;&#x43E;</span>
+					<span> 500 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x418;&#x43D;&#x44A;&#x435;&#x43A;&#x446;&#x438;&#x438; &#x43E;&#x437;&#x43E;&#x43D;&#x430; &#x432; &#x43B;&#x438;&#x446;&#x43E; &#x438; &#x448;&#x435;&#x44E;</span>
+					<span> 700 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41E;&#x437;&#x43E;&#x43D;&#x43E;&#x432;&#x44B;&#x435; &#x438;&#x43D;&#x44A;&#x435;&#x43A;&#x446;&#x438;&#x438;: &#x43B;&#x438;&#x446;&#x43E;, &#x448;&#x435;&#x44F; &#x438; &#x434;&#x435;&#x43A;&#x43E;&#x43B;&#x44C;&#x442;&#x435;</span>
+					<span> 900 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x410;&#x43D;&#x442;&#x438;&#x446;&#x435;&#x43B;&#x43B;&#x44E;&#x43B;&#x438;&#x442;&#x43D;&#x430;&#x44F; &#x43F;&#x440;&#x43E;&#x433;&#x440;&#x430;&#x43C;&#x43C;&#x430; (1 &#x437;&#x43E;&#x43D;&#x430;)</span>
+					<span> 500 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41E;&#x43A;&#x441;&#x438;&#x433;&#x435;&#x43D;&#x43E;&#x442;&#x435;&#x440;&#x430;&#x43F;&#x438;&#x44F; (&#x434;&#x44B;&#x445;&#x430;&#x43D;&#x438;&#x435; &#x443;&#x432;&#x43B;&#x430;&#x436;&#x43D;&#x435;&#x43D;&#x43D;&#x44B;&#x43C; &#x43A;&#x438;&#x441;&#x43B;&#x43E;&#x440;&#x43E;&#x434;&#x43E;&#x43C;) 5-15 &#x43C;&#x438;&#x43D;&#x443;&#x442;</span>
+					<span> 300 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41E;&#x43A;&#x441;&#x438;&#x433;&#x435;&#x43D;&#x43E;&#x442;&#x435;&#x440;&#x430;&#x43F;&#x438;&#x44F; (&#x434;&#x44B;&#x445;&#x430;&#x43D;&#x438;&#x435; &#x443;&#x432;&#x43B;&#x430;&#x436;&#x43D;&#x435;&#x43D;&#x43D;&#x44B;&#x43C; &#x43A;&#x438;&#x441;&#x43B;&#x43E;&#x440;&#x43E;&#x434;&#x43E;&#x43C;) 15-30 &#x43C;&#x438;&#x43D;&#x443;&#x442;</span>
+					<span> 500 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41E;&#x437;&#x43E;&#x43D;&#x43E;&#x432;&#x44B;&#x435; &#x438;&#x43D;&#x44A;&#x435;&#x43A;&#x446;&#x438;&#x438; &#x432;&#x43E;&#x43B;&#x43E;&#x441;&#x438;&#x441;&#x442;&#x43E;&#x439; &#x447;&#x430;&#x441;&#x442;&#x438; &#x433;&#x43E;&#x43B;&#x43E;&#x432;&#x44B;</span>
+					<span> 700 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x421;&#x435;&#x430;&#x43D;&#x441; &#x43E;&#x437;&#x43E;&#x43D;&#x43E;&#x442;&#x435;&#x440;&#x430;&#x43F;&#x438;&#x438; &#x434;&#x43B;&#x44F; &#x431;&#x43E;&#x440;&#x44C;&#x431;&#x44B; &#x441; &#x446;&#x435;&#x43B;&#x43B;&#x44E;&#x43B;&#x438;&#x442;&#x43E;&#x43C;</span>
+					<span> 600 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41A;&#x430;&#x43F;&#x435;&#x43B;&#x44C;&#x43D;&#x438;&#x446;&#x430; &#x441; &#x43E;&#x437;&#x43E;&#x43D;&#x43E;&#x43C;</span>
+					<span> 500 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41F;&#x43E;&#x434;&#x43A;&#x43E;&#x436;&#x43D;&#x43E;&#x435; &#x432;&#x432;&#x435;&#x434;&#x435;&#x43D;&#x438;&#x435; &#x43E;&#x437;&#x43E;&#x43D;&#x430; (1 &#x437;&#x43E;&#x43D;&#x430;)</span>
+					<span> 500 &#x440;.</span>
+				</li></ul><ul class="price-list__prices"><li class="price-list__price">
+					<span>&#x41E;&#x431;&#x440;&#x430;&#x431;&#x43E;&#x442;&#x43A;&#x430; &#x432;&#x440;&#x43E;&#x441;&#x448;&#x435;&#x433;&#x43E; &#x43D;&#x43E;&#x433;&#x442;&#x44F; (&#x447;&#x438;&#x441;&#x442;&#x43A;&#x430;,&#x442;&#x430;&#x43C;&#x43F;&#x43E;&#x43D;&#x438;&#x440;&#x43E;&#x432;&#x430;&#x43D;&#x438;&#x435;, &#x441;&#x43D;&#x44F;&#x442;&#x438;&#x435; &#x432;&#x43E;&#x441;&#x43F;&#x430;&#x43B;&#x435;&#x43D;&#x438;&#x44F;)</span>
+					<span> 1500 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41A;&#x43E;&#x440;&#x440;&#x435;&#x43A;&#x446;&#x438;&#x43E;&#x43D;&#x43D;&#x430;&#x44F; &#x441;&#x438;&#x441;&#x442;&#x435;&#x43C;&#x430; &#xAB;&#x422;&#x438;&#x442;&#x430;&#x43D;&#x43E;&#x432;&#x430;&#x44F; &#x43D;&#x438;&#x442;&#x44C;&#xBB;</span>
+					<span> 3000 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41E;&#x431;&#x440;&#x430;&#x431;&#x43E;&#x442;&#x43A;&#x430; &#x432;&#x440;&#x43E;&#x441;&#x448;&#x435;&#x433;&#x43E; &#x43D;&#x43E;&#x433;&#x442;&#x44F; &#x432; &#x43F;&#x440;&#x43E;&#x446;&#x435;&#x434;&#x443;&#x440;&#x435;</span>
+					<span> 500 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41E;&#x431;&#x440;&#x430;&#x431;&#x43E;&#x442;&#x43A;&#x430; &#x432;&#x440;&#x43E;&#x441;&#x448;&#x435;&#x433;&#x43E; &#x43D;&#x43E;&#x433;&#x442;&#x44F; &#x441; &#x43F;&#x435;&#x440;&#x435;&#x432;&#x44F;&#x437;&#x43A;&#x43E;&#x439;</span>
+					<span> 750 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41E;&#x431;&#x440;&#x430;&#x431;&#x43E;&#x442;&#x43A;&#x430; &#x441;&#x442;&#x43E;&#x43F; &#x43F;&#x43E;&#x440;&#x430;&#x436;&#x435;&#x43D;&#x43D;&#x44B;&#x445; &#x43C;&#x438;&#x43A;&#x43E;&#x437;&#x43E;&#x43C;</span>
+					<span> 1200 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x414;&#x438;&#x430;&#x431;&#x435;&#x442;&#x438;&#x447;&#x435;&#x441;&#x43A;&#x430;&#x44F; &#x441;&#x442;&#x43E;&#x43F;&#x430;</span>
+					<span> 1000 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41E;&#x431;&#x440;&#x430;&#x431;&#x43E;&#x442;&#x43A;&#x430; &#x442;&#x440;&#x435;&#x449;&#x438;&#x43D; &#x432; &#x43F;&#x440;&#x43E;&#x446;&#x435;&#x434;&#x443;&#x440;&#x435;</span>
+					<span> 500 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41E;&#x431;&#x440;&#x430;&#x431;&#x43E;&#x442;&#x43A;&#x430; &#x442;&#x440;&#x435;&#x449;&#x438;&#x43D; (&#x432;&#x43C;&#x435;&#x441;&#x442;&#x435; &#x441; &#x43F;&#x435;&#x440;&#x435;&#x432;&#x44F;&#x437;&#x43A;&#x43E;&#x439;)</span>
+					<span> 1200 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41E;&#x431;&#x440;&#x430;&#x431;&#x43E;&#x442;&#x43A;&#x430; &#x43C;&#x43E;&#x437;&#x43E;&#x43B;&#x435;&#x439; &#x432; &#x43F;&#x440;&#x43E;&#x446;&#x435;&#x434;&#x443;&#x440;&#x435;</span>
+					<span> 500 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41E;&#x431;&#x440;&#x430;&#x431;&#x43E;&#x442;&#x43A;&#x430; &#x43C;&#x43E;&#x437;&#x43E;&#x43B;&#x435;&#x439; (&#x432;&#x43C;&#x435;&#x441;&#x442;&#x435; &#x441; &#x43F;&#x435;&#x440;&#x435;&#x432;&#x44F;&#x437;&#x43A;&#x43E;&#x439;)</span>
+					<span> 1200 &#x440;.</span>
+				</li></ul><ul class="price-list__prices"><li class="price-list__price">
+					<span>&#x413;&#x435;&#x43D;&#x435;&#x442;&#x438;&#x447;&#x435;&#x441;&#x43A;&#x438;&#x439; &#x442;&#x435;&#x441;&#x442;</span>
+					<span> 12000 &#x440;.</span>
+				</li></ul><ul class="price-list__prices"><li class="price-list__price">
+					<span>&#x414;&#x43E; 5 &#x431;&#x430;&#x43D;&#x434;&#x430;&#x436;&#x435;&#x439;</span>
+					<span> 850 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>6-8 &#x431;&#x430;&#x43D;&#x434;&#x430;&#x436;&#x435;&#x439;</span>
+					<span> 1000 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>9-10 &#x431;&#x430;&#x43D;&#x434;&#x430;&#x436;&#x435;&#x439;</span>
+					<span> 1200 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41E;&#x431;&#x449;&#x438;&#x439; &#x43B;&#x438;&#x43C;&#x444;&#x43E;&#x434;&#x440;&#x435;&#x43D;&#x430;&#x436;</span>
+					<span> 600 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41E;&#x431;&#x449;&#x438;&#x439; &#x43B;&#x438;&#x43C;&#x444;&#x43E;&#x434;&#x440;&#x435;&#x43D;&#x430;&#x436; &#x441; &#x430;&#x43D;&#x442;&#x438;&#x446;&#x435;&#x43B;&#x43B;&#x44E;&#x43B;&#x438;&#x442;&#x43D;&#x44B;&#x43C; &#x43E;&#x431;&#x435;&#x440;&#x442;&#x44B;&#x432;&#x430;&#x43D;&#x438;&#x435;&#x43C;</span>
+					<span> 1500 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x414;&#x435;&#x440;&#x43C;&#x43E;&#x442;&#x43E;&#x43D;&#x438;&#x44F; - 45 &#x43C;&#x438;&#x43D;&#x443;&#x442;</span>
+					<span> 1000 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x414;&#x435;&#x440;&#x43C;&#x43E;&#x442;&#x43E;&#x43D;&#x438;&#x44F; - 1 &#x447;&#x430;&#x441;</span>
+					<span> 1200 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x411;&#x435;&#x434;&#x440;&#x430;, &#x44F;&#x433;&#x43E;&#x434;&#x438;&#x446;&#x44B; (&#x43E;&#x442; &#x43A;&#x43E;&#x43B;&#x435;&#x43D;&#x430; &#x434;&#x43E; &#x43F;&#x43E;&#x44F;&#x441;&#x43D;&#x438;&#x447;&#x43D;&#x43E;&#x439; &#x43E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x438;)</span>
+					<span> 400 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x411;&#x435;&#x434;&#x440;&#x430;, &#x44F;&#x433;&#x43E;&#x434;&#x438;&#x446;&#x44B;, &#x431;&#x43E;&#x43A;&#x430;</span>
+					<span> 450 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x411;&#x435;&#x434;&#x440;&#x430;, &#x44F;&#x433;&#x43E;&#x434;&#x438;&#x446;&#x44B;, &#x436;&#x438;&#x432;&#x43E;&#x442; (&#x441; &#x431;&#x43E;&#x43A;&#x430;&#x43C;&#x438; &#x438; &#x43F;&#x43E;&#x44F;&#x441;&#x43D;&#x438;&#x446;&#x435;&#x439;)</span>
+					<span> 500 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x411;&#x435;&#x434;&#x440;&#x430;, &#x44F;&#x433;&#x43E;&#x434;&#x438;&#x446;&#x44B;, &#x436;&#x438;&#x432;&#x43E;&#x442;, &#x441;&#x43F;&#x438;&#x43D;&#x430;</span>
+					<span> 600 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x416;&#x438;&#x432;&#x43E;&#x442; (&#x441; &#x431;&#x43E;&#x43A;&#x430;&#x43C;&#x438; &#x438; &#x43F;&#x43E;&#x44F;&#x441;&#x43D;&#x438;&#x447;&#x43D;&#x43E;&#x439; &#x43E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x44C;&#x44E;)</span>
+					<span> 350 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x421;&#x43F;&#x438;&#x43D;&#x430;</span>
+					<span> 350 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x420;&#x443;&#x43A;&#x438; (&#x43E;&#x442; &#x43F;&#x43B;&#x435;&#x447;&#x430; &#x434;&#x43E; &#x43B;&#x43E;&#x43A;&#x442;&#x44F;)</span>
+					<span> 150 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x413;&#x43E;&#x43B;&#x435;&#x43D;&#x438;</span>
+					<span> 150 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x411;&#x430;&#x43D;&#x434;&#x430;&#x436;&#x43D;&#x43E;&#x435; &#x43E;&#x431;&#x435;&#x440;&#x442;&#x44B;&#x432;&#x430;&#x43D;&#x438;&#x435; T-Shock</span>
+					<span> 2500 &#x440;.</span>
+				</li></ul><ul class="price-list__prices"><li class="price-list__price">
+					<span>&#x421;&#x430;&#x43A;&#x445;&#x443;&#x43D; - &#x443;&#x43D;&#x438;&#x43A;&#x430;&#x43B;&#x44C;&#x43D;&#x430;&#x44F; &#x43F;&#x440;&#x43E;&#x446;&#x435;&#x434;&#x443;&#x440;&#x430;&#x443;&#x445;&#x43E;&#x434;&#x430; &#x441; &#x44D;&#x43A;&#x441;&#x442;&#x440;&#x430;&#x43A;&#x442;&#x43E;&#x43C; &#x43B;&#x43E;&#x442;&#x43E;&#x441;&#x430;</span>
+					<span> 3000 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41C;&#x430;&#x441;&#x441;&#x430;&#x436; &#x43E;&#x431;&#x449;&#x438;&#x439; &#x436;&#x435;&#x43D;&#x441;&#x43A;&#x438;&#x439; (1&#x447;)</span>
+					<span> 1500 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41C;&#x430;&#x441;&#x441;&#x430;&#x436; &#x43E;&#x431;&#x449;&#x438;&#x439; &#x43C;&#x443;&#x436;&#x441;&#x43A;&#x43E;&#x439; (1&#x447;)</span>
+					<span> 1700 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41C;&#x430;&#x441;&#x441;&#x430;&#x436; &#x441;&#x43F;&#x438;&#x43D;&#x44B; &#x43E;&#x442; &#x437;&#x430;&#x442;&#x44B;&#x43B;&#x43E;&#x447;&#x43D;&#x44B;&#x445; &#x431;&#x443;&#x433;&#x440;&#x43E;&#x432; &#x434;&#x43E; &#x43A;&#x440;&#x435;&#x441;&#x442;&#x446;&#x430; &#x43C;&#x443;&#x436;&#x441;&#x43A;&#x43E;&#x439; (35 &#x43C;&#x438;&#x43D;&#x443;&#x442;)</span>
+					<span> 900 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41C;&#x430;&#x441;&#x441;&#x430;&#x436; &#x441;&#x43F;&#x438;&#x43D;&#x44B; &#x43E;&#x442; &#x437;&#x430;&#x442;&#x44B;&#x43B;&#x43E;&#x447;&#x43D;&#x44B;&#x445; &#x431;&#x443;&#x433;&#x440;&#x43E;&#x432; &#x434;&#x43E; &#x43A;&#x440;&#x435;&#x441;&#x442;&#x446;&#x430; &#x436;&#x435;&#x43D;&#x441;&#x43A;&#x438;&#x439; (35 &#x43C;&#x438;&#x43D;&#x443;&#x442;)</span>
+					<span> 800 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41C;&#x430;&#x441;&#x441;&#x430;&#x436; &#x432;&#x43E;&#x440;&#x43E;&#x442;&#x43D;&#x438;&#x43A;&#x43E;&#x432;&#x43E;&#x439; &#x437;&#x43E;&#x43D;&#x44B; &#x43C;&#x443;&#x436;&#x441;&#x43A;&#x43E;&#x439; (30 &#x43C;&#x438;&#x43D;&#x443;&#x442;)</span>
+					<span> 700 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41C;&#x430;&#x441;&#x441;&#x430;&#x436; &#x432;&#x43E;&#x440;&#x43E;&#x442;&#x43D;&#x438;&#x43A;&#x43E;&#x432;&#x43E;&#x439; &#x437;&#x43E;&#x43D;&#x44B; &#x436;&#x435;&#x43D;&#x441;&#x43A;&#x438;&#x439; (30 &#x43C;&#x438;&#x43D;&#x443;&#x442;)</span>
+					<span> 700 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41C;&#x430;&#x441;&#x441;&#x430;&#x436; &#x432;&#x43E;&#x440;&#x43E;&#x442;&#x43D;&#x438;&#x43A;&#x43E;&#x432;&#x43E;&#x439; &#x437;&#x43E;&#x43D;&#x44B; &#x441; &#x433;&#x43E;&#x43B;&#x43E;&#x432;&#x43E;&#x439; (40 &#x43C;&#x438;&#x43D;&#x443;&#x442;)</span>
+					<span> 800 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41C;&#x430;&#x441;&#x441;&#x430;&#x436; &#x440;&#x435;&#x43B;&#x430;&#x43A;&#x441;&#x438;&#x440;&#x443;&#x44E;&#x449;&#x438;&#x439; (2 &#x447;&#x430;&#x441;&#x430;)</span>
+					<span> 2000 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41C;&#x430;&#x441;&#x441;&#x430;&#x436; &#x43C;&#x43E;&#x434;&#x435;&#x43B;&#x438;&#x440;&#x443;&#x44E;&#x449;&#x438;&#x439; (2 &#x447;&#x430;&#x441;&#x430;)</span>
+					<span> 2500 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41C;&#x430;&#x441;&#x441;&#x430;&#x436; &#x43D;&#x43E;&#x433; (40 &#x43C;&#x438;&#x43D;&#x443;&#x442;)</span>
+					<span> 800 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41C;&#x435;&#x434;&#x43E;&#x432;&#x44B;&#x439; &#x43C;&#x430;&#x441;&#x441;&#x430;&#x436; &#x442;&#x435;&#x43B;&#x430;</span>
+					<span> 2000 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41C;&#x430;&#x441;&#x441;&#x430;&#x436; &#x43B;&#x438;&#x43C;&#x444;&#x43E;&#x434;&#x440;&#x435;&#x43D;&#x430;&#x436;&#x43D;&#x44B;&#x439;</span>
+					<span> 1200 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41C;&#x430;&#x441;&#x441;&#x430;&#x436; &#x430;&#x43D;&#x442;&#x438;&#x446;&#x435;&#x43B;&#x43B;&#x44E;&#x43B;&#x438;&#x442;&#x43D;&#x44B;&#x439; &#x43F;&#x43E; &#x43F;&#x440;&#x43E;&#x431;&#x43B;&#x435;&#x43C;&#x43D;&#x44B;&#x43C; &#x437;&#x43E;&#x43D;&#x430;&#x43C; (1 &#x447;&#x430;&#x441;)</span>
+					<span> 1500 &#x440;.</span>
+				</li></ul><ul class="price-list__prices"><li class="price-list__price">
+					<span>&#x41E;&#x431;&#x449;&#x438;&#x439; &#x43C;&#x430;&#x441;&#x441;&#x430;&#x436; - &#x441;&#x442;&#x43E;&#x443;&#x43D;&#x442;&#x435;&#x440;&#x430;&#x43F;&#x438;&#x44F; (1 &#x447;&#x430;&#x441; 50 &#x43C;&#x438;&#x43D;&#x443;&#x442;)</span>
+					<span> 2000 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x421;&#x442;&#x43E;&#x443;&#x43D;&#x442;&#x435;&#x440;&#x430;&#x43F;&#x438;&#x44F; &#x441;&#x43F;&#x438;&#x43D;&#x44B; (1 &#x447;&#x430;&#x441;)</span>
+					<span> 1000 &#x440;.</span>
+				</li></ul><ul class="price-list__prices"><li class="price-list__price">
+					<span>&#x412;&#x43B;&#x43E;&#x43A;</span>
+					<span> 500 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x418;&#x43D;&#x444;&#x440;&#x430;&#x43A;&#x440;&#x430;&#x441;&#x43D;&#x43E;&#x435; &#x438;&#x437;&#x43B;&#x443;&#x447;&#x435;&#x43D;&#x438;&#x435;</span>
+					<span> 200 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x424;&#x43E;&#x43D;&#x43E;&#x444;&#x43E;&#x440;&#x435;&#x437; &#x441; &#x43F;&#x440;&#x43E;&#x442;&#x438;&#x432;&#x43E;&#x432;&#x43E;&#x441;&#x43F;&#x430;&#x43B;&#x438;&#x442;&#x435;&#x43B;&#x44C;&#x43D;&#x43E;&#x439;&#x43E;&#x431;&#x435;&#x437;&#x431;&#x43E;&#x43B;&#x438;&#x432;&#x430;&#x44E;&#x449;&#x435;&#x439; &#x43C;&#x430;&#x437;&#x44C;&#x44E;</span>
+					<span> 500 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x414;&#x438;&#x430;&#x434;&#x438;&#x43D;&#x430;&#x43C;&#x438;&#x447;&#x435;&#x441;&#x43A;&#x438;&#x435; &#x442;&#x43E;&#x43A;&#x438;</span>
+					<span> 500 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41B;&#x435;&#x43A;&#x430;&#x440;&#x441;&#x442;&#x432;&#x435;&#x43D;&#x43D;&#x44B;&#x439; &#x44D;&#x43B;&#x435;&#x43A;&#x442;&#x440;&#x43E;&#x444;&#x43E;&#x440;&#x435;&#x437;</span>
+					<span> 600 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x42D;&#x43B;&#x435;&#x43A;&#x442;&#x440;&#x43E;&#x444;&#x43E;&#x440;&#x435;&#x437; &#x441; &#x43F;&#x440;&#x438;&#x43C;&#x435;&#x43D;&#x435;&#x43D;&#x438;&#x435;&#x43C; &#x43F;&#x43E;&#x43B;&#x438;&#x444;&#x435;&#x440;&#x43C;&#x435;&#x43D;&#x442;&#x43D;&#x43E;&#x433;&#x43E; &#x43F;&#x440;&#x435;&#x43F;&#x430;&#x440;&#x430;&#x442;&#x430; &#xAB;&#x41A;&#x430;&#x440;&#x438;&#x43F;&#x430;&#x438;&#x43D;&#xBB;</span>
+					<span> 600 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x42D;&#x43B;&#x435;&#x43A;&#x442;&#x440;&#x43E;&#x441;&#x43E;&#x43D;</span>
+					<span> 300 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x42D;&#x43B;&#x435;&#x43A;&#x442;&#x440;&#x43E;&#x444;&#x43E;&#x440;&#x435;&#x437; (&#x433;&#x430;&#x43B;&#x44C;&#x432;&#x430;&#x43D;&#x438;&#x437;&#x430;&#x446;&#x438;&#x44F;)</span>
+					<span> 500 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x421;&#x435;&#x430;&#x43D;&#x441; &#x43E;&#x431;&#x449;&#x435;&#x439; &#x43C;&#x430;&#x433;&#x43D;&#x438;&#x442;&#x43E;&#x442;&#x435;&#x440;&#x430;&#x43F;&#x438;&#x438;</span>
+					<span> 400 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x410;&#x43F;&#x43F;&#x43B;&#x438;&#x43A;&#x430;&#x446;&#x438;&#x438; &#x422;&#x43E;&#x43C;&#x435;&#x434; (&#x43B;&#x435;&#x447;&#x435;&#x431;&#x43D;&#x430;&#x44F; &#x433;&#x440;&#x44F;&#x437;&#x44C;)</span>
+					<span> 400 &#x440;.</span>
+				</li></ul><ul class="price-list__prices"><li class="price-list__price">
+					<span>&#x421;&#x442;&#x440;&#x438;&#x436;&#x43A;&#x430;&#x202F; &#x436;&#x435;&#x43D;&#x441;&#x43A;&#x430;&#x44F; &#x43C;&#x43E;&#x434;&#x435;&#x43B;&#x44C;&#x43D;&#x430;&#x44F;</span>
+					<span> 700 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x421;&#x442;&#x440;&#x438;&#x436;&#x43A;&#x430; &#x434;&#x435;&#x442;&#x441;&#x43A;&#x430;&#x44F; (&#x434;&#x43E; 10 &#x43B;&#x435;&#x442;)</span>
+					<span> 350 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41F;&#x43E;&#x434;&#x440;&#x430;&#x432;&#x43D;&#x438;&#x432;&#x430;&#x43D;&#x438;&#x435; &#x447;&#x435;&#x43B;&#x43A;&#x438;</span>
+					<span> 150 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41F;&#x43E;&#x434;&#x440;&#x430;&#x432;&#x43D;&#x438;&#x432;&#x430;&#x43D;&#x438;&#x435; &#x447;&#x435;&#x43B;&#x43A;&#x438;</span>
+					<span> 300 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41C;&#x435;&#x43B;&#x438;&#x440;&#x43E;&#x432;&#x430;&#x43D;&#x438;&#x435;</span>
+					<span> 800 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x422;&#x43E;&#x43D;&#x438;&#x440;&#x43E;&#x432;&#x430;&#x43D;&#x438;&#x435;</span>
+					<span> 500 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x414;&#x435;&#x43A;&#x43E;&#x43F;&#x430;&#x436;</span>
+					<span> 500 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41E;&#x43A;&#x440;&#x430;&#x441;&#x43A;&#x430; &#x432;&#x43E;&#x43B;&#x43E;&#x441;</span>
+					<span> 400 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x411;&#x43B;&#x43E;&#x43D;&#x434;&#x438;&#x440;&#x43E;&#x432;&#x430;&#x43D;&#x438;&#x435; &#x432;&#x43E;&#x43B;&#x43E;&#x441;</span>
+					<span> 500 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x423;&#x43A;&#x43B;&#x430;&#x434;&#x43A;&#x430; &#x444;&#x435;&#x43D;&#x43E;&#x43C;</span>
+					<span> 500 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x423;&#x43A;&#x43B;&#x430;&#x434;&#x43A;&#x430; &#x444;&#x435;&#x43D;&#x43E;&#x43C; &#x441; &#x438;&#x441;&#x43F;&#x43E;&#x43B;&#x44C;&#x437;&#x43E;&#x432;&#x430;&#x43D;&#x438;&#x435;&#x43C; &#x443;&#x43A;&#x43B;&#x430;&#x434;&#x43E;&#x447;&#x43D;&#x44B;&#x445; &#x441;&#x440;&#x435;&#x434;&#x441;&#x442;&#x432;</span>
+					<span> 600 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x423;&#x43A;&#x43B;&#x430;&#x434;&#x43A;&#x430; &#x432;&#x43E;&#x43B;&#x43E;&#x441; &#x43D;&#x430; &#x431;&#x438;&#x433;&#x443;&#x434;&#x438;</span>
+					<span> 900 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x412;&#x44B;&#x43F;&#x440;&#x44F;&#x43C;&#x43B;&#x435;&#x43D;&#x438;&#x435; &#x432;&#x43E;&#x43B;&#x43E;&#x441;</span>
+					<span> 700 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x425;&#x438;&#x43C;&#x438;&#x447;&#x435;&#x441;&#x43A;&#x430;&#x44F; &#x437;&#x430;&#x432;&#x438;&#x432;&#x43A;&#x430;</span>
+					<span> 1800 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x411;&#x438;&#x43E;&#x440;&#x435;&#x43A;&#x43E;&#x43D;&#x441;&#x442;&#x440;&#x443;&#x43A;&#x446;&#x438;&#x44F;</span>
+					<span> 1500 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x423;&#x432;&#x43B;&#x430;&#x436;&#x43D;&#x435;&#x43D;&#x438;&#x435; &#x432;&#x43E;&#x43B;&#x43E;&#x441; &#x43F;&#x440;&#x435;&#x43F;&#x430;&#x440;&#x430;&#x442;&#x430;&#x43C;&#x438; &#x444;&#x438;&#x440;&#x43C;&#x44B; BES</span>
+					<span> 250 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41A;&#x435;&#x440;&#x430;&#x442;&#x438;&#x43D;&#x43E;&#x432;&#x43E;&#x435; &#x432;&#x44B;&#x43F;&#x440;&#x44F;&#x43C;&#x43B;&#x435;&#x43D;&#x438;&#x435; &#x432;&#x43E;&#x43B;&#x43E;&#x441;</span>
+					<span> 3500 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x421;&#x442;&#x440;&#x438;&#x436;&#x43A;&#x430; &#x43C;&#x443;&#x436;&#x441;&#x43A;&#x430;&#x44F; &#x43C;&#x43E;&#x434;&#x435;&#x43B;&#x44C;&#x43D;&#x430;&#x44F;</span>
+					<span> 500 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41A;&#x43E;&#x440;&#x440;&#x435;&#x43A;&#x446;&#x438;&#x44F; &#x431;&#x440;&#x43E;&#x432;&#x435;&#x439;</span>
+					<span> 300 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x421;&#x442;&#x440;&#x438;&#x436;&#x43A;&#x430; &#x443;&#x441;&#x43E;&#x432;</span>
+					<span> 150 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x421;&#x442;&#x440;&#x438;&#x436;&#x43A;&#x430; &#x431;&#x43E;&#x440;&#x43E;&#x434;&#x44B;</span>
+					<span> 150 &#x440;.</span>
+				</li></ul><ul class="price-list__prices"><li class="price-list__price">
+					<span>&#x41E;&#x43A;&#x440;&#x430;&#x441;&#x43A;&#x430; &#x431;&#x440;&#x43E;&#x432;&#x435;&#x439; &#x43A;&#x440;&#x430;&#x441;&#x438;&#x442;&#x435;&#x43B;&#x435;&#x43C; &#x42D;&#x441;&#x442;&#x435;&#x43B;&#x44C;</span>
+					<span> 200 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41E;&#x43A;&#x440;&#x430;&#x441;&#x43A;&#x430; &#x431;&#x440;&#x43E;&#x432;&#x435;&#x439; &#x43A;&#x440;&#x430;&#x441;&#x438;&#x442;&#x435;&#x43B;&#x435;&#x43C; &#x428;&#x432;&#x430;&#x440;&#x446;&#x43A;&#x43E;&#x43F;&#x444;</span>
+					<span> 400 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41A;&#x43E;&#x440;&#x440;&#x435;&#x43A;&#x446;&#x438;&#x44F; &#x444;&#x43E;&#x440;&#x43C;&#x44B; &#x431;&#x440;&#x43E;&#x432;&#x435;&#x439; &#x43F;&#x438;&#x43D;&#x446;&#x435;&#x442;&#x43E;&#x43C;</span>
+					<span> 150 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41A;&#x43E;&#x440;&#x440;&#x435;&#x43A;&#x446;&#x438;&#x44F; &#x444;&#x43E;&#x440;&#x43C;&#x44B; &#x431;&#x440;&#x43E;&#x432;&#x435;&#x439; &#x432;&#x43E;&#x441;&#x43A;&#x43E;&#x43C;</span>
+					<span> 200 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41E;&#x43A;&#x440;&#x430;&#x441;&#x43A;&#x430; &#x440;&#x435;&#x441;&#x43D;&#x438;&#x446; &#x43A;&#x440;&#x430;&#x441;&#x438;&#x442;&#x435;&#x43B;&#x435;&#x43C; &#x42D;&#x441;&#x442;&#x435;&#x43B;&#x44C;</span>
+					<span> 200 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41E;&#x43A;&#x440;&#x430;&#x441;&#x43A;&#x430; &#x440;&#x435;&#x441;&#x43D;&#x438;&#x446; &#x43A;&#x440;&#x430;&#x441;&#x438;&#x442;&#x435;&#x43B;&#x435;&#x43C; &#x428;&#x432;&#x430;&#x440;&#x446;&#x43A;&#x43E;&#x43F;&#x444;</span>
+					<span> 400 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x425;&#x438;&#x43C;&#x438;&#x447;&#x435;&#x441;&#x43A;&#x430;&#x44F; &#x437;&#x430;&#x432;&#x438;&#x432;&#x43A;&#x430; &#x440;&#x435;&#x441;&#x43D;&#x438;&#x446;</span>
+					<span> 700 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x411;&#x438;&#x43E;&#x442;&#x430;&#x442;&#x443;&#x430;&#x436; &#x431;&#x440;&#x43E;&#x432;&#x435;&#x439; &#x445;&#x43D;&#x43E;&#x439;</span>
+					<span> 500 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41B;&#x430;&#x43C;&#x438;&#x43D;&#x438;&#x440;&#x43E;&#x432;&#x430;&#x43D;&#x438;&#x435; &#x440;&#x435;&#x441;&#x43D;&#x438;&#x446;</span>
+					<span> 2000 &#x440;.</span>
+				</li></ul><ul class="price-list__prices"><li class="price-list__price">
+					<span>&#x41A;&#x43E;&#x43D;&#x441;&#x443;&#x43B;&#x44C;&#x442;&#x430;&#x446;&#x438;&#x44F; &#x43F;&#x43E; &#x442;&#x430;&#x442;&#x443;&#x430;&#x436;&#x443;</span>
+					<span> 300 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x422;&#x430;&#x442;&#x443;&#x430;&#x436; &#x431;&#x440;&#x43E;&#x432;&#x435;&#x439;</span>
+					<span> 5000 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x422;&#x430;&#x442;&#x443;&#x430;&#x436; &#x433;&#x43B;&#x430;&#x437;</span>
+					<span> 5000 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x422;&#x430;&#x442;&#x443;&#x430;&#x436; &#x433;&#x443;&#x431;</span>
+					<span> 5500 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41A;&#x43E;&#x440;&#x440;&#x435;&#x43A;&#x446;&#x438;&#x44F; &#x442;&#x430;&#x442;&#x443;&#x430;&#x436;&#x430;</span>
+					<span> 2500 &#x440;.</span>
+				</li></ul><ul class="price-list__prices"><li class="price-list__price">
+					<span>&#x41F;&#x438;&#x440;&#x441;&#x438;&#x43D;&#x433; &#x43D;&#x43E;&#x441;&#x430;</span>
+					<span> 1100 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41F;&#x438;&#x440;&#x441;&#x438;&#x43D;&#x433; &#x43F;&#x443;&#x43F;&#x43A;&#x430;</span>
+					<span> 1300 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41F;&#x440;&#x43E;&#x43A;&#x43E;&#x43B; &#x43C;&#x43E;&#x447;&#x435;&#x43A; &#x443;&#x448;&#x435;&#x439; STUDEX System R993</span>
+					<span> 1000 &#x440;.</span>
+				</li></ul><ul class="price-list__prices"><li class="price-list__price">
+					<span>&#x428;&#x443;&#x433;&#x430;&#x440;&#x438;&#x43D;&#x433; - &#x411;&#x438;&#x43A;&#x438;&#x43D;&#x438;</span>
+					<span> 1000 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x428;&#x443;&#x433;&#x430;&#x440;&#x438;&#x43D;&#x433; - &#x411;&#x451;&#x434;&#x440;&#x430;</span>
+					<span> 800 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x428;&#x443;&#x433;&#x430;&#x440;&#x438;&#x43D;&#x433; - &#x420;&#x443;&#x43A;&#x438;</span>
+					<span> 700 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x428;&#x443;&#x433;&#x430;&#x440;&#x438;&#x43D;&#x433; - &#x413;&#x43E;&#x43B;&#x435;&#x43D;&#x44C;</span>
+					<span> 600 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x428;&#x443;&#x433;&#x430;&#x440;&#x438;&#x43D;&#x433; - &#x41F;&#x43E;&#x434;&#x43C;&#x44B;&#x448;&#x43A;&#x438;</span>
+					<span> 400 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x428;&#x443;&#x433;&#x430;&#x440;&#x438;&#x43D;&#x433; - &#x41B;&#x438;&#x446;&#x43E;</span>
+					<span> 300 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x44C; &#x431;&#x438;&#x43A;&#x438;&#x43D;&#x438; (&#x43F;&#x43E;&#x43B;&#x43D;&#x43E;&#x441;&#x442;&#x44C;&#x44E;)</span>
+					<span> 1000 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x411;&#x438;&#x43A;&#x438;&#x43D;&#x438; &#x43D;&#x430;&#x440;&#x443;&#x436;&#x43D;&#x43E;&#x435;</span>
+					<span> 550 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41F;&#x43E;&#x434;&#x43C;&#x44B;&#x448;&#x435;&#x447;&#x43D;&#x430;&#x44F; &#x43E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x44C;</span>
+					<span> 400 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x44C; &#x433;&#x43E;&#x43B;&#x435;&#x43D;&#x438;</span>
+					<span> 450 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x44C; &#x433;&#x43E;&#x43B;&#x435;&#x43D;&#x438; &#x438; &#x431;&#x435;&#x434;&#x440;&#x430;</span>
+					<span> 1000 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x44C; &#x431;&#x435;&#x434;&#x440;&#x430;</span>
+					<span> 550 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x44C; &#x43F;&#x440;&#x435;&#x434;&#x43F;&#x43B;&#x435;&#x447;&#x44C;&#x44F;</span>
+					<span> 450 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x412;&#x435;&#x440;&#x445;&#x43D;&#x44F;&#x44F; &#x433;&#x443;&#x431;&#x430;</span>
+					<span> 200 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41F;&#x43E;&#x434;&#x431;&#x43E;&#x440;&#x43E;&#x434;&#x43E;&#x43A;</span>
+					<span> 250 &#x440;.</span>
+				</li></ul><ul class="price-list__prices"><li class="price-list__price">
+					<span>&#x42D;&#x43B;&#x435;&#x43A;&#x442;&#x440;&#x43E;&#x44D;&#x43F;&#x438;&#x43B;&#x44F;&#x446;&#x438;&#x44F; - 1 &#x43C;&#x438;&#x43D;&#x443;&#x442;&#x430;</span>
+					<span> 40 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x418;&#x43D;&#x434;&#x438;&#x432;&#x438;&#x434;&#x443;&#x430;&#x43B;&#x44C;&#x43D;&#x430;&#x44F; &#x438;&#x433;&#x43B;&#x430;</span>
+					<span> 100 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x410;&#x43D;&#x435;&#x441;&#x442;&#x435;&#x437;&#x438;&#x44F;</span>
+					<span> 150 &#x440;.</span>
+				</li></ul><ul class="price-list__prices"><li class="price-list__price">
+					<span>&#x41F;&#x435;&#x434;&#x438;&#x43A;&#x44E;&#x440;</span>
+					<span> 1000 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41F;&#x43E;&#x43A;&#x440;&#x44B;&#x442;&#x438;&#x435; &#x433;&#x435;&#x43B;&#x44C;-&#x43B;&#x430;&#x43A;&#x43E;&#x43C;</span>
+					<span> 500 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41C;&#x443;&#x436;&#x441;&#x43A;&#x43E;&#x439; &#x43F;&#x435;&#x434;&#x438;&#x43A;&#x44E;&#x440;</span>
+					<span> 1800 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x410;&#x43F;&#x43F;&#x430;&#x440;&#x430;&#x442;&#x43D;&#x44B;&#x439; &#x43F;&#x435;&#x434;&#x438;&#x43A;&#x44E;&#x440;</span>
+					<span> 1500 &#x440;.</span>
+				</li></ul><ul class="price-list__prices"><li class="price-list__price">
+					<span>&#x41C;&#x430;&#x43D;&#x438;&#x43A;&#x44E;&#x440; &#x435;&#x432;&#x440;&#x43E;&#x43F;&#x435;&#x439;&#x441;&#x43A;&#x438;&#x439;, &#x43A;&#x43E;&#x43C;&#x431;&#x438;&#x43D;&#x438;&#x440;&#x43E;&#x432;&#x430;&#x43D;&#x43D;&#x44B;&#x439;</span>
+					<span> 450 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x414;&#x435;&#x442;&#x441;&#x43A;&#x438;&#x439; &#x43C;&#x430;&#x43D;&#x438;&#x43A;&#x44E;&#x440;</span>
+					<span> 250 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x411;&#x430;&#x437;&#x43E;&#x432;&#x43E;&#x435; &#x43B;&#x435;&#x447;&#x435;&#x431;&#x43D;&#x43E;&#x435; &#x43F;&#x43E;&#x43A;&#x440;&#x44B;&#x442;&#x438;&#x435;</span>
+					<span> 100 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41F;&#x43E;&#x43A;&#x440;&#x44B;&#x442;&#x438;&#x435; &#x43B;&#x430;&#x43A;&#x430; &#x437;&#x430;&#x43A;&#x440;&#x435;&#x43F;&#x438;&#x442;&#x435;&#x43B;&#x435;&#x43C;</span>
+					<span> 50 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x425;&#x443;&#x434;&#x43E;&#x436;&#x435;&#x441;&#x442;&#x432;&#x435;&#x43D;&#x43D;&#x43E;&#x435; &#x43F;&#x43E;&#x43A;&#x440;&#x44B;&#x442;&#x438;&#x435; - &#x430;&#x43A;&#x440;&#x438;&#x43B;&#x43E;&#x432;&#x430;&#x44F; &#x43A;&#x440;&#x430;&#x441;&#x43A;&#x430;, &#x441;&#x43B;&#x430;&#x439;&#x434;&#x435;&#x440; &#x434;&#x438;&#x437;&#x430;&#x439;&#x43D; (1 &#x435;&#x434;&#x438;&#x43D;&#x438;&#x446;&#x430;)</span>
+					<span> 50 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x425;&#x443;&#x434;&#x43E;&#x436;&#x435;&#x441;&#x442;&#x432;&#x435;&#x43D;&#x43D;&#x43E;&#x435; &#x43F;&#x43E;&#x43A;&#x440;&#x44B;&#x442;&#x438;&#x435; &#x43E;&#x442; &#x44D;&#x43C;&#x438; (1 &#x435;&#x434;&#x438;&#x43D;&#x438;&#x446;&#x430;)</span>
+					<span> 100 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x424;&#x440;&#x435;&#x43D;&#x447;, &#x440;&#x443;&#x444;&#x444;&#x438;&#x430;&#x43D;, &#x43B;&#x443;&#x43D;&#x43A;&#x430; (10 &#x435;&#x434;&#x438;&#x43D;&#x438;&#x446;)</span>
+					<span> 200 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41F;&#x43E;&#x43A;&#x440;&#x44B;&#x442;&#x438;&#x435; &#x43B;&#x430;&#x43A;&#x43E;&#x43C; - 1 &#x441;&#x43B;&#x43E;&#x439; (2 &#x441;&#x43B;&#x43E;&#x44F;)</span>
+					<span> 50 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x413;&#x43E;&#x440;&#x44F;&#x447;&#x438;&#x439; &#x43B;&#x435;&#x447;&#x435;&#x431;&#x43D;&#x44B;&#x439; &#x43C;&#x430;&#x43D;&#x438;&#x43A;&#x44E;&#x440;</span>
+					<span> 500 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x424;&#x440;&#x430;&#x43D;&#x446;&#x443;&#x437;&#x441;&#x43A;&#x438;&#x439; &#x43C;&#x430;&#x43D;&#x438;&#x43A;&#x44E;&#x440;</span>
+					<span> 100 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x413;&#x435;&#x43B;&#x435;&#x432;&#x43E;&#x435; &#x43D;&#x430;&#x440;&#x430;&#x449;&#x438;&#x432;&#x430;&#x43D;&#x438;&#x435;</span>
+					<span> 1400 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41A;&#x43E;&#x440;&#x440;&#x435;&#x43A;&#x446;&#x438;&#x44F; &#x43D;&#x43E;&#x433;&#x442;&#x435;&#x439; (&#x433;&#x435;&#x43B;&#x44C;)</span>
+					<span> 1000 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41A;&#x43E;&#x440;&#x440;&#x435;&#x43A;&#x446;&#x438;&#x44F; &#x43D;&#x43E;&#x433;&#x442;&#x435;&#x439; &#x43F;&#x43E;&#x432;&#x44B;&#x448;&#x435;&#x43D;&#x43D;&#x43E;&#x439; &#x441;&#x43B;&#x43E;&#x436;&#x43D;&#x43E;&#x441;&#x442;&#x438; (&#x433;&#x435;&#x43B;&#x44C;)</span>
+					<span> 1200 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x410;&#x43A;&#x432;&#x430;&#x440;&#x438;&#x443;&#x43C;&#x43D;&#x44B;&#x439; &#x434;&#x438;&#x437;&#x430;&#x439;&#x43D;</span>
+					<span> 1600 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41F;&#x430;&#x440;&#x430;&#x444;&#x438;&#x43D;&#x43E;&#x442;&#x435;&#x440;&#x430;&#x43F;&#x438;&#x44F;</span>
+					<span> 400 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x423;&#x43A;&#x440;&#x435;&#x43F;&#x43B;&#x435;&#x43D;&#x438;&#x435; &#x43D;&#x43E;&#x433;&#x442;&#x435;&#x439; Shellac (&#x428;&#x435;&#x43B;&#x43B;&#x430;&#x43A;) &#x441; &#x43C;&#x430;&#x43D;&#x438;&#x43A;&#x44E;&#x440;&#x43E;&#x43C;</span>
+					<span> 1200 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x421;&#x43D;&#x44F;&#x442;&#x438;&#x435; &#x43B;&#x435;&#x447;&#x435;&#x431;&#x43D;&#x43E;&#x433;&#x43E; &#x43F;&#x43E;&#x43A;&#x440;&#x44B;&#x442;&#x438;&#x44F; Shellac (&#x428;&#x435;&#x43B;&#x43B;&#x430;&#x43A;)</span>
+					<span> 200 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41C;&#x430;&#x441;&#x441;&#x430;&#x436; &#x440;&#x443;&#x43A;</span>
+					<span> 100 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x423;&#x43A;&#x440;&#x435;&#x43F;&#x43B;&#x435;&#x43D;&#x438;&#x435; &#x430;&#x43A;&#x440;&#x438;&#x43B;&#x43E;&#x43C; &#x43F;&#x440;&#x438; &#x43F;&#x43E;&#x43A;&#x440;&#x44B;&#x442;&#x438;&#x438; &#x433;&#x435;&#x43B;&#x44C;-&#x43B;&#x430;&#x43A;&#x43E;&#x43C;</span>
+					<span> 200 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41B;&#x435;&#x447;&#x435;&#x43D;&#x438;&#x435; &#x43D;&#x43E;&#x433;&#x442;&#x435;&#x439; &#x43F;&#x440;&#x435;&#x43F;&#x430;&#x440;&#x430;&#x442;&#x43E;&#x43C; Booster (Emi)</span>
+					<span> 250 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41B;&#x435;&#x447;&#x435;&#x431;&#x43D;&#x44B;&#x439; &#x43C;&#x430;&#x43D;&#x438;&#x43A;&#x44E;&#x440;</span>
+					<span> 650 &#x440;.</span>
+				</li></ul><ul class="price-list__prices"><li class="price-list__price">
+					<span>&#x410;&#x43B;&#x44C;&#x433;&#x438;&#x43D;&#x430;&#x442;&#x43D;&#x44B;&#x435; &#x43F;&#x43B;&#x430;&#x441;&#x442;&#x438;&#x444;&#x438;&#x446;&#x438;&#x440;&#x443;&#x44E;&#x449;&#x438;&#x435; &#x43C;&#x430;&#x441;&#x43A;&#x438; &#x434;&#x43B;&#x44F; &#x43B;&#x438;&#x446;&#x430;</span>
+					<span> 600 &#x440;.</span>
+				</li><li class="price-list__price">
+					<span>&#x41A;&#x430;&#x440;&#x431;&#x43E;&#x43A;&#x441;&#x438;&#x442;&#x435;&#x440;&#x430;&#x43F;&#x438;&#x44F;</span>
+					<span> 2500 &#x440;.</span>
+				</li></ul>
